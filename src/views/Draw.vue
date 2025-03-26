@@ -1,0 +1,388 @@
+<template>
+  <div class="wrap">
+    <headerVue />
+    <div class="big_title container fall-enter-active">
+      <div class="t1">Monad's Interstellar Gallery</div>
+      <div class="t2">
+        <!-- Monad的星际画廊
+        "在Monad高速区块链的引擎轰鸣中，来自全球的艺术家们汇聚于此，用色彩与线条勾勒出社区的梦想。
+这里，每一幅画作都是Monad精神的缩影——去中心化的节点如繁星闪耀，超速的执行如光流奔腾，共同构筑起一个艺术与技术交融的乌托邦。探索这片光谱，加入这场创意的星际旅程。" -->
+        <span>
+          Amidst the roar of Monad's high-speed blockchain engine, artists from
+          around the world gather here to outline the dreams of the community
+          with colors and lines.Here, each painting is a microcosm of the Monad
+          spirit - decentralized nodes shining like stars, speeding execution
+          like a rushing stream of light, jointly building a utopia where art
+          and technology blend together. Explore this spectrum and join this
+          creative interstellar journey.
+        </span>
+      </div>
+    </div>
+    <div class="waterfall-container">
+      <!-- 瀑布流列容器 -->
+      <div
+        class="waterfall-column"
+        v-for="(column, index) in columns"
+        :key="index"
+      >
+        <!-- 每个图片盒子 -->
+        <div class="image-box" v-for="(item, index) in column" :key="index">
+          <img :src="item.src" :alt="item.name" @load="onImageLoad" />
+          <div class="image-info">
+            <a :href="item.twitter" target="_blank">
+              <h3>
+                <img src="@/assets/auther.png" alt="" />
+                <span>    {{ item.name }}</span>
+              </h3>
+              <p>{{ item.describe }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footerVue />
+  </div>
+</template>
+
+<script>
+import headerVue from "@/components/header.vue";
+import footerVue from "@/components/footer.vue";
+export default {
+  name: "WaterfallGallery",
+  components: {
+    headerVue,
+    footerVue,
+  },
+  data() {
+    return {
+      showText: false,
+      // 图片数据
+      imgList: [
+        {
+          src: require("@/assets/test_art/Charles97019791-1.jpg"),
+          name: "Kyrie tt.nad",
+          describe: "",
+          twitter: "https://x.com/Charles97019791",
+        },
+        {
+          src: require("@/assets/test_art/Charles97019791-2.jpg"),
+          name: "Kyrie tt.nad",
+          describe: "",
+          twitter: "https://x.com/Charles97019791",
+        },
+        {
+          src: require("@/assets/test_art/Charles97019791-3.jpg"),
+          name: "Kyrie tt.nad",
+          describe: "",
+          twitter: "https://x.com/Charles97019791",
+        },
+        {
+          src: require("@/assets/test_art/dj673285379-1.jpg"),
+          name: "J King",
+          describe: "",
+          twitter: "https://x.com/dj673285379",
+        },
+        {
+          src: require("@/assets/test_art/dj673285379-2.jpg"),
+          name: "J King",
+          describe: "",
+          twitter: "https://x.com/dj673285379",
+        },
+        {
+          src: require("@/assets/test_art/dj673285379-3.jpg"),
+          name: "J King",
+          describe: "",
+          twitter: "https://x.com/dj673285379",
+        },
+        {
+          src: require("@/assets/test_art/HhhhHannah-1.jpg"),
+          name: "hannah_hhhh",
+          describe: "",
+          twitter: "https://x.com/HhhhHannah",
+        },
+        {
+          src: require("@/assets/test_art/HhhhHannah-2.jpg"),
+          name: "hannah_hhhh",
+          describe: "",
+          twitter: "https://x.com/HhhhHannah",
+        },
+        {
+          src: require("@/assets/test_art/jaychen981111-1.jpg"),
+          name: "CHEN⌘",
+          describe: "",
+          twitter: "https://x.com/jaychen981111",
+        },
+        {
+          src: require("@/assets/test_art/jaychen981111-2.jpg"),
+          name: "CHEN⌘",
+          describe: "",
+          twitter: "https://x.com/jaychen981111",
+        },
+        {
+          src: require("@/assets/test_art/jaychen981111-3.jpg"),
+          name: "CHEN⌘",
+          describe: "",
+          twitter: "https://x.com/jaychen981111",
+        },
+        {
+          src: require("@/assets/test_art/melanthaia-1.jpg"),
+          name: "melanthaia",
+          describe: "",
+          twitter: "https://x.com/melanthaia",
+        },
+        {
+          src: require("@/assets/test_art/Mido_269-1.jpg"),
+          name: "Midodo",
+          describe: "",
+          twitter: "https://x.com/Mido_269",
+        },
+        {
+          src: require("@/assets/test_art/Mido_269-2.jpg"),
+          name: "Midodo",
+          describe: "",
+          twitter: "https://x.com/Mido_269",
+        },
+        {
+          src: require("@/assets/test_art/Mido_269-3.jpg"),
+          name: "Midodo",
+          describe: "",
+          twitter: "https://x.com/Mido_269",
+        },
+        {
+          src: require("@/assets/test_art/Pican0_o-3.jpg"),
+          name: "Picano",
+          describe: "",
+          twitter: "https://x.com/Pican0_o",
+        },
+        {
+          src: require("@/assets/test_art/Pican0_o-2.jpg"),
+          name: "Picano",
+          describe: "",
+          twitter: "https://x.com/Pican0_o",
+        },
+        {
+          src: require("@/assets/test_art/Pican0_o-1.jpg"),
+          name: "Picano",
+          describe: "",
+          twitter: "https://x.com/Pican0_o",
+        },
+        {
+          src: require("@/assets/test_art/Pican0_o-4.jpg"),
+          name: "Picano",
+          describe: "",
+          twitter: "https://x.com/Pican0_o",
+        },
+        {
+          src: require("@/assets/test_art/Pican0_o-5.jpg"),
+          name: "Picano",
+          describe: "",
+          twitter: "https://x.com/Pican0_o",
+        },
+        {
+          src: require("@/assets/test_art/Polly_r7-1.jpg"),
+          name: "Pollyyyyy",
+          describe: "",
+          twitter: "https://x.com/Polly_r7",
+        },
+        {
+          src: require("@/assets/test_art/Polly_r7-2.jpg"),
+          name: "Pollyyyyy",
+          describe: "",
+          twitter: "https://x.com/Polly_r7",
+        },
+        {
+          src: require("@/assets/test_art/Polly_r7-3.jpg"),
+          name: "Pollyyyyy",
+          describe: "",
+          twitter: "https://x.com/Polly_r7",
+        },
+        {
+          src: require("@/assets/test_art/XHOYH-1.jpg"),
+          name: "Huan",
+          describe: "",
+          twitter: "https://x.com/XHOYH",
+        },
+        {
+          src: require("@/assets/test_art/XHOYH-2.jpg"),
+          name: "Huan",
+          describe: "",
+          twitter: "https://x.com/XHOYH",
+        },
+        {
+          src: require("@/assets/test_art/XHOYH-3.jpg"),
+          name: "Huan",
+          describe: "",
+          twitter: "https://x.com/XHOYH",
+        },
+        {
+          src: require("@/assets/test_art/XHOYH-4.jpg"),
+          name: "Huan",
+          describe: "",
+          twitter: "https://x.com/XHOYH",
+        },
+      ],
+      columnCount: 4, // 列数
+      loadedImages: 0, // 已加载图片计数
+    };
+  },
+  computed: {
+    // 将图片分配到各列
+    columns() {
+      const columns = Array.from({ length: this.columnCount }, () => []);
+      this.imgList.forEach((image, index) => {
+        columns[index % this.columnCount].push(image);
+      });
+      return columns;
+    },
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+    // this.showText = true;
+    // setTimeout(() => {
+    //   // this.showNft = true;
+    // }, 500);
+  },
+  methods: {
+    // 图片加载完成回调
+    onImageLoad(event) {
+      this.loadedImages++;
+      if (this.loadedImages === this.images.length) {
+        console.log("所有图片加载完成");
+      }
+    },
+    // 生成随机高度（可选）
+    // getRandomHeight(min, max) {
+    //   return Math.floor(Math.random() * (max - min + 1)) + min;
+    // },
+  },
+};
+</script>
+<style lang="less" scoped>
+.wrap {
+  padding-top: 100px;
+
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .big_title {
+    margin: 80px auto 50px;
+    text-align: center;
+    .t1 {
+      font-size: 40px;
+    }
+
+    .t2 {
+      margin-top: 15px;
+      font-size: 20px;
+      span {
+        display: block;
+      }
+    }
+  }
+  /* 定义进入动画 */
+  .fall-enter-active {
+    animation: fallDown 0.5s ease-out;
+  }
+
+  /* 定义动画 */
+  @keyframes fallDown {
+    from {
+      transform: translateY(-100vh); /* 从上方开始 */
+    }
+    to {
+      transform: translateY(0); /* 掉落到最终位置 */
+    }
+  }
+
+  .waterfall-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    .waterfall-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: calc((100% - 40px) / 3); /* 3列，考虑间隙 */
+
+      .image-box {
+        width: 100%;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+          width: 100%;
+          display: block;
+          object-fit: cover;
+        }
+
+        .image-info {
+          padding: 15px;
+
+          h3 {
+            display: flex;
+            align-content: center;
+            margin: 0 0 8px 0;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            color: #333;
+
+            &:hover{
+              span {
+                color: #836ef9;
+              }
+            }
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 900px) {
+    .waterfall-column {
+      width: calc((100% - 20px) / 2); /* 2列 */
+    }
+    .columnCount {
+      columncount: 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .waterfall-column {
+      width: 100%; /* 1列 */
+    }
+    .columnCount {
+      columncount: 1;
+    }
+  }
+}
+</style>
