@@ -424,47 +424,6 @@ export default {
           animationDelay: "-3.2s",
         },
       ],
-      // floatingCardStyles: [
-      //   {
-      //     width: "400px",
-      //     height: "300px",
-      //     top: "30px",
-      //     left: "2%",
-      //     "--rotation": "-8deg",
-      //   },
-      //   {
-      //     width: "600px",
-      //     height: "350px",
-      //     top: "320px",
-      //     left: "1%",
-      //     "--rotation": "5deg",
-      //     animationDelay: "-0.8s",
-      //   },
-      //   {
-      //     width: "300px",
-      //     height: "200px",
-      //     top: "19px",
-      //     right: "18%",
-      //     "--rotation": "9deg",
-      //     animationDelay: "-1.6s",
-      //   },
-      //   {
-      //     width: "400px",
-      //     height: "300px",
-      //     top: "150px",
-      //     right: "2%",
-      //     "--rotation": "-2deg",
-      //     animationDelay: "-2.4s",
-      //   },
-      //   {
-      //     width: "460px",
-      //     height: "300px",
-      //     top: "400px",
-      //     right: "8%",
-      //     "--rotation": "2deg",
-      //     animationDelay: "-3.2s",
-      //   },
-      // ],
     };
   },
   computed: {
@@ -550,6 +509,7 @@ export default {
   padding: 50px 0;
   position: relative;
   height: calc(100vh - 100px);
+  min-height: 850px;
   overflow: hidden;
 
   &::before {
@@ -887,49 +847,49 @@ export default {
 }
 
 /* 响应式设计 */
-@media (max-width: 1200px) {
-  .floating-cards-section {
-    height: auto;
-    padding: 2rem 0;
+// @media (max-width: 1200px) {
+//   .floating-cards-section {
+//     height: auto;
+//     padding: 20px 0;
 
-    .floating-card {
-      position: relative !important;
-      width: 90% !important;
-      height: 300px !important;
-      margin: 0 auto 2rem !important;
-      transform: none !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-    }
-  }
+//     .floating-card {
+//       position: relative !important;
+//       width: 90% !important;
+//       height: 300px !important;
+//       margin: 0 auto 20px !important;
+//       transform: none !important;
+//       top: auto !important;
+//       left: auto !important;
+//       right: auto !important;
+//     }
+//   }
 
-  .page2 .title {
-    font-size: 60px;
-  }
-}
+//   .page2 .title {
+//     font-size: 60px;
+//   }
+// }
 
-@media (max-width: 768px) {
-  .page2 .title {
-    font-size: 40px;
-  }
+// @media (max-width: 768px) {
+//   .page2 .title {
+//     font-size: 40px;
+//   }
 
-  .page3 .all {
-    flex-direction: column;
-    gap: 20px;
+//   .page3 .all {
+//     flex-direction: column;
+//     gap: 20px;
 
-    .right {
-      width: 100%;
-      text-align: center;
-    }
-  }
+//     .right {
+//       width: 100%;
+//       text-align: center;
+//     }
+//   }
 
-  .carousel-section .carousel-row {
-    height: 200px;
+//   .carousel-section .carousel-row {
+//     height: 200px;
 
-    .carousel-item {
-      min-width: 120px !important;
-    }
-  }
-}
+//     .carousel-item {
+//       min-width: 120px !important;
+//     }
+//   }
+// }
 </style>
