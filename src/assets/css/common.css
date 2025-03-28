@@ -24,12 +24,26 @@ body,
 
 body {
     font-family: "Poppins", sans-serif;
-    line-height: 1.6;
-    color: white;
     background: #000;
+    color: white;
+    line-height: 1.6;
     min-height: 100vh;
-    overflow-x: hidden;
-}
+    
+    /* 核心修改：强制内容宽度为1440px，允许横向滚动 */
+    min-width: 9.8rem;       /* 锁定最小宽度 */
+    overflow-x: auto;        /* 允许横向滚动 */
+    margin: 0 auto;          /* 水平居中 */
+  }
+  
+  /* 可选：美化滚动条（兼容Chrome/Firefox） */
+  body::-webkit-scrollbar {
+    height: 8px;
+    background: #2d3748;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: var(--monad-light-purple);
+    border-radius: 4px;
+  }
 
 ul {
     list-style-type: none;

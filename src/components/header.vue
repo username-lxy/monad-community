@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :style="{ height: show_ ? '100vh' : '100px' }">
+  <div class="navbar" :style="{ height: show_ ? 'nav_h1' : 'nav_h2' }">
     <div
       :class="`nav-container ${show_ ? 'move_nav nav-no-shadow' : ''} ${
         !isSolid ? 'nav-shadow' : 'nav-no-shadow'
@@ -18,6 +18,7 @@
           ]"
           alt="Monad Logo"
         />
+        <!-- <span class="tagline">社区的星际窗口</span> -->
         <!-- <span class="logo-text">Monad</span> -->
       </div>
       <div class="nav-tabs">
@@ -78,7 +79,7 @@
         {{ item.name }}
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 <script>
 export default {
@@ -144,6 +145,12 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.nav_h1 {
+  height: 100vh !important;
+}
+.nav_h2 {
+  height: 100px !important;
+}
 .navbar {
   position: fixed;
   top: 0;

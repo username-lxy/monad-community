@@ -171,6 +171,7 @@
 <script>
 import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
+import { styleToRem } from "@/utils/pxToRem";
 // import { nftData } from "@/assets/js/art.js";
 export default {
   components: {
@@ -382,7 +383,7 @@ export default {
           twitter: "https://x.com/Mido_269",
         },
       ],
-      floatingCardStyles: [
+      rawCardStyles: [
         {
           width: "400px",
           height: "300px",
@@ -423,6 +424,47 @@ export default {
           animationDelay: "-3.2s",
         },
       ],
+      // floatingCardStyles: [
+      //   {
+      //     width: "400px",
+      //     height: "300px",
+      //     top: "30px",
+      //     left: "2%",
+      //     "--rotation": "-8deg",
+      //   },
+      //   {
+      //     width: "600px",
+      //     height: "350px",
+      //     top: "320px",
+      //     left: "1%",
+      //     "--rotation": "5deg",
+      //     animationDelay: "-0.8s",
+      //   },
+      //   {
+      //     width: "300px",
+      //     height: "200px",
+      //     top: "19px",
+      //     right: "18%",
+      //     "--rotation": "9deg",
+      //     animationDelay: "-1.6s",
+      //   },
+      //   {
+      //     width: "400px",
+      //     height: "300px",
+      //     top: "150px",
+      //     right: "2%",
+      //     "--rotation": "-2deg",
+      //     animationDelay: "-2.4s",
+      //   },
+      //   {
+      //     width: "460px",
+      //     height: "300px",
+      //     top: "400px",
+      //     right: "8%",
+      //     "--rotation": "2deg",
+      //     animationDelay: "-3.2s",
+      //   },
+      // ],
     };
   },
   computed: {
@@ -431,6 +473,10 @@ export default {
     },
     duplicatedCarouselItems1() {
       return [...this.carouselItems1, ...this.carouselItems1];
+    },
+    // 转换为rem的样式
+    floatingCardStyles() {
+      return this.rawCardStyles.map((style) => styleToRem(style));
     },
   },
   mounted() {
@@ -529,7 +575,7 @@ export default {
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 1rem;
+    padding: 15px;
     transition: all 0.5s ease;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -597,7 +643,8 @@ export default {
 /* 第二页样式 */
 .page2 {
   padding-top: 100px !important;
-  height: calc(100vh - 100px);
+  // height: calc(100vh - 100px);
+  min-height: 800px;
   text-align: center;
 
   .title {
@@ -686,7 +733,7 @@ export default {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 20px 0;
 
     .carousel-row {
       position: relative;

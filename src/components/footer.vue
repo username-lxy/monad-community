@@ -94,120 +94,84 @@ export default {
 
 <style lang="less" scoped>
 .footer {
-  margin-top: 200px;
+  // margin-top: 200px;
+  padding-top: 200px;
   position: relative;
-  //   height: 800px;
-  .footer_logo {
-    position: absolute;
-    top: -100px;
-    left: 200px;
-    width: 400px;
-    z-index: 3;
-    img {
-      width: 100%;
-    }
-  }
+  min-height: 800px; /* 确保有高度 */
+  overflow: hidden; /* 防止溢出 */
+}
 
-  .ri_img {
-    position: absolute;
-    top: 37px;
-    right: 150px;
-    width: 250px;
-    height: 250px;
-    opacity: 0.8;
-    filter: blur(2px);
-    pointer-events: none;
-    transform-origin: center;
-    animation: rotateLogo 30s linear infinite;
-    z-index: 3;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+.footer_logo {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 400px;
+  z-index: 3;
+}
+.footer_logo img {
+  width: 100%;
+}
 
-  @keyframes rotateLogo {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
+.rotundity {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  width: 100%;
+  height: 400px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  filter: drop-shadow(rgba(119, 85, 255, 0.592) 0px -10px 50px);
+  background-color: #1d1d1d;
+  scale: 1.3 1; /* 避免水平溢出 */
+  z-index: 1;
+}
 
-  .rotundity {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 400px;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-    filter: drop-shadow(rgba(119, 85, 255, 0.592) 0px -10px 50px);
-    background-color: #1d1d1d;
-    scale: 1.2 1;
-    z-index: 1;
-  }
-  .content {
-    position: absolute;
-    top: 150px;
-    width: 100%;
-    background-color: #1d1d1d;
-    z-index: 2;
-    .all {
-      width: 200px;
-      margin: 0 auto;
-      // display: flex;
-      // flex-direction: column;
-      color: var(--e-global-color-854f927);
-      li {
-        // display: inline-block;
-        padding: 10px 20px;
-        font-family: "Poppins", Sans-serif;
-        font-size: 20px;
-        font-weight: 300;
-        text-align: center;
-        color: #c0c0c0;
-        cursor: pointer;
-
-        &:hover {
-          color: #fff;
-        }
-      }
-    }
-    .call {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      text-align: center;
-      img {
-        width: 30px;
-        height: 30px;
-        background: pink;
-      }
-      .img1 {
-        // margin-right: 30px;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-
-        &:hover {
-          path {
-            fill: #fff; /* 改为蓝色 */
-          }
-        }
-      }
-    }
-    .monad {
-      color: var(--e-global-color-854f927);
-      font-family: "Poppins", Sans-serif;
-      font-size: 100px;
-      font-weight: 700;
-      position: relative;
-      text-align: center;
-    }
-  }
+.content {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  background-color: #1d1d1d;
+  z-index: 2;
+}
+.content .all {
+  width: 200px;
+  margin: 0 auto;
+  color: var(--e-global-color-854f927);
+}
+.content .all li {
+  padding: 10px 20px;
+  font-family: "Poppins", Sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  color: #c0c0c0;
+  cursor: pointer;
+}
+.content .all li:hover {
+  color: #fff;
+}
+.content .call {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.content .call .img1 {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.content .call .img1:hover path {
+  fill: #fff;
+}
+.content .monad {
+  color: var(--e-global-color-854f927);
+  font-family: "Poppins", Sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
 }
 </style> 
