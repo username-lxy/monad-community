@@ -32,7 +32,7 @@
             <a :href="item.twitter" target="_blank">
               <h3>
                 <img src="@/assets/auther.png" alt="" />
-                <span>    {{ item.name }}</span>
+                <span> {{ item.name }}</span>
               </h3>
               <p>{{ item.describe }}</p>
             </a>
@@ -47,6 +47,8 @@
 <script>
 import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
+import { artList } from "@/assets/js/art.js";
+import { getImg } from "@/assets/js/draw.js";
 export default {
   name: "WaterfallGallery",
   components: {
@@ -57,170 +59,7 @@ export default {
     return {
       showText: false,
       // 图片数据
-      imgList: [
-        {
-          src: require("@/assets/test_art/Charles97019791-1.jpg"),
-          name: "Kyrie tt.nad",
-          describe: "",
-          twitter: "https://x.com/Charles97019791",
-        },
-        {
-          src: require("@/assets/test_art/Charles97019791-2.jpg"),
-          name: "Kyrie tt.nad",
-          describe: "",
-          twitter: "https://x.com/Charles97019791",
-        },
-        {
-          src: require("@/assets/test_art/Charles97019791-3.jpg"),
-          name: "Kyrie tt.nad",
-          describe: "",
-          twitter: "https://x.com/Charles97019791",
-        },
-        {
-          src: require("@/assets/test_art/dj673285379-1.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
-        },
-        {
-          src: require("@/assets/test_art/dj673285379-2.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
-        },
-        {
-          src: require("@/assets/test_art/dj673285379-3.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
-        },
-        {
-          src: require("@/assets/test_art/HhhhHannah-1.jpg"),
-          name: "hannah_hhhh",
-          describe: "",
-          twitter: "https://x.com/HhhhHannah",
-        },
-        {
-          src: require("@/assets/test_art/HhhhHannah-2.jpg"),
-          name: "hannah_hhhh",
-          describe: "",
-          twitter: "https://x.com/HhhhHannah",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-1.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-2.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-3.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/melanthaia-1.jpg"),
-          name: "melanthaia",
-          describe: "",
-          twitter: "https://x.com/melanthaia",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-1.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-2.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-3.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-3.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-2.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-1.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-4.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-5.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Polly_r7-1.jpg"),
-          name: "Pollyyyyy",
-          describe: "",
-          twitter: "https://x.com/Polly_r7",
-        },
-        {
-          src: require("@/assets/test_art/Polly_r7-2.jpg"),
-          name: "Pollyyyyy",
-          describe: "",
-          twitter: "https://x.com/Polly_r7",
-        },
-        {
-          src: require("@/assets/test_art/Polly_r7-3.jpg"),
-          name: "Pollyyyyy",
-          describe: "",
-          twitter: "https://x.com/Polly_r7",
-        },
-        {
-          src: require("@/assets/test_art/XHOYH-1.jpg"),
-          name: "Huan",
-          describe: "",
-          twitter: "https://x.com/XHOYH",
-        },
-        {
-          src: require("@/assets/test_art/XHOYH-2.jpg"),
-          name: "Huan",
-          describe: "",
-          twitter: "https://x.com/XHOYH",
-        },
-        {
-          src: require("@/assets/test_art/XHOYH-3.jpg"),
-          name: "Huan",
-          describe: "",
-          twitter: "https://x.com/XHOYH",
-        },
-        {
-          src: require("@/assets/test_art/XHOYH-4.jpg"),
-          name: "Huan",
-          describe: "",
-          twitter: "https://x.com/XHOYH",
-        },
-      ],
+      imgList: [...artList],
       columnCount: 4, // 列数
       loadedImages: 0, // 已加载图片计数
     };
@@ -232,28 +71,39 @@ export default {
       this.imgList.forEach((image, index) => {
         columns[index % this.columnCount].push(image);
       });
-      return columns;
+      const newArray = [...columns];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+      // return columns;
     },
   },
   mounted() {
     window.scrollTo(0, 0);
-    // this.showText = true;
-    // setTimeout(() => {
-    //   // this.showNft = true;
-    // }, 500);
+    // let data = getImg("Charles97019791-1.jpg");
+    // console.log(data);
   },
   methods: {
+    shuffleImages() {
+      this.columns = this.shuffleArray(this.columns);
+    },
+    shuffleArray(array) {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+    },
     // 图片加载完成回调
     onImageLoad(event) {
       this.loadedImages++;
-      if (this.loadedImages === this.images.length) {
+      if (this.loadedImages === this.imgList.length) {
         console.log("所有图片加载完成");
       }
     },
-    // 生成随机高度（可选）
-    // getRandomHeight(min, max) {
-    //   return Math.floor(Math.random() * (max - min + 1)) + min;
-    // },
   },
 };
 </script>
@@ -344,7 +194,7 @@ export default {
             font-size: 16px;
             color: #333;
 
-            &:hover{
+            &:hover {
               span {
                 color: #836ef9;
               }

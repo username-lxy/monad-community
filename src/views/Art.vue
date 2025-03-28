@@ -11,7 +11,11 @@
           @mouseleave="handleMouseLeave(index)"
           :style="floatingCardStyles[index]"
         >
-          <img :src="video_img[index]" alt="" v-show="index != video_index" />
+          <img
+            :src="video_img[index].src"
+            alt=""
+            v-show="index != video_index"
+          />
           <video
             :ref="'videoPlayer' + index"
             loop
@@ -21,6 +25,59 @@
           >
             <source :src="video.src" type="video/mp4" />
           </video>
+          <div class="auther" v-show="video_index == index">
+            <a href="" target="_blank" class="link"
+              ><svg
+                t="1743086223225"
+                class="icon"
+                viewBox="0 0 1107 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                p-id="4551"
+                width="200"
+                height="200"
+              >
+                <path
+                  d="M352.457692 579.234694a176.741926 176.741926 0 0 1-50.769294 105.153231c-12.604305 12.604305-32.015403 24.457515-60.439636 37.366952a430.424095 430.424095 0 0 0 52.693974 105.951268c180.051436 262.883077 559.236803 260.535907 737.621748 0 115.504252-168.714603 99.613909-407.89126-56.707635-564.189332-70.063034-70.063034-128.671878-69.429298-161.954753-59.66507-52.740917 15.538268-91.046737 68.06794-91.046737 124.84599a59.195636 59.195636 0 0 1-117.804479 7.135398c-2.88702 3.121737-5.844454 6.266945-8.82536 9.388681-84.498132 90.013982-178.971738 179.112568-242.720884 233.918995z m184.698834 293.677952a88.793454 88.793454 0 1 1 125.597084 0 88.88734 88.88734 0 0 1-125.550141 0z m376.767781-83.723566a88.793454 88.793454 0 1 1 0-125.597084 88.88734 88.88734 0 0 1 0.046943 125.597084z m41.873519-376.767781a88.816925 88.816925 0 1 1-125.597085 0 88.910812 88.910812 0 0 1 125.644028 0z m-230.140051 104.660325a88.816925 88.816925 0 1 1-125.597085 0 88.910812 88.910812 0 0 1 125.597085 0z m-209.32065 41.850047a88.816925 88.816925 0 1 1-125.597085 0 88.910812 88.910812 0 0 1 125.52667 0zM346.378521 388.550576a176.601096 176.601096 0 0 1 44.948312 76.118734c-15.937287 14.88106-31.240837 28.846723-45.535104 41.638802a177.375662 177.375662 0 0 0-117.827951-117.358517c13.191097-14.998418 26.992459-30.301969 41.263254-45.699406a175.850001 175.850001 0 0 1 77.151489 45.300387zM649.773758 12.909437c13.63706-6.736379 49.853898-24.66876 73.396016-1.126642 6.19653 6.19653 13.355399 17.298645 12.416531 35.019781-3.708529 68.819034-161.36796 241.758544-297.433424 373.364385a237.650996 237.650996 0 0 0-124.400027-123.954065C433.247295 172.822151 571.331326 51.825521 649.773758 12.909437zM259.861823 475.067275a118.555573 118.555573 0 0 1 0 167.470603c-27.931327 27.907855-164.301923 70.673299-220.305407 90.67119A29.597818 29.597818 0 0 1 1.72003 695.396154c20.514269-57.576088 62.857221-192.467967 90.694661-220.328879a118.532102 118.532102 0 0 1 167.447132 0z"
+                  p-id="4552"
+                  fill="#ffffff"
+                ></path></svg
+              >&nbsp;<span>{{ video_img[index].name }}</span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" target="_blank" class="link"
+              ><svg
+                t="1743086319512"
+                class="icon"
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                p-id="9165"
+                width="200"
+                height="200"
+              >
+                <path
+                  d="M861.44 246.8864a68.266667 68.266667 0 0 1 93.422933 58.965333l0.136534 4.3008 0.477866 232.5504a68.266667 68.266667 0 0 1-89.361066 65.0752l-4.061867-1.467733-157.832533-62.583467a34.133333 34.133333 0 0 1 22.647466-64.341333l2.5088 0.887467 157.832534 62.5664-0.477867-232.533334-157.2864 62.737067a34.133333 34.133333 0 0 1-27.733333-62.327467l2.440533-1.092266 157.2864-62.737067z"
+                  fill="#ffffff"
+                  p-id="9166"
+                ></path>
+                <path
+                  d="M682.666667 119.466667H136.533333a68.266667 68.266667 0 0 0-68.266666 68.266666v477.866667a68.266667 68.266667 0 0 0 68.266666 68.266667h546.133334a68.266667 68.266667 0 0 0 68.266666-68.266667V187.733333a68.266667 68.266667 0 0 0-68.266666-68.266666zM136.533333 187.733333h546.133334v477.866667H136.533333V187.733333z"
+                  fill="#ffffff"
+                  p-id="9167"
+                ></path>
+                <path
+                  d="M242.5344 701.5424a34.133333 34.133333 0 0 1 62.1568 28.091733l-1.092267 2.423467-85.333333 170.666667a34.133333 34.133333 0 0 1-62.1568-28.091734l1.092267-2.423466 85.333333-170.666667zM530.875733 686.267733a34.133333 34.133333 0 0 1 44.509867 12.919467l1.28 2.3552 85.333333 170.666667a34.133333 34.133333 0 0 1-59.784533 32.8704l-1.28-2.3552-85.333333-170.666667a34.133333 34.133333 0 0 1 15.274666-45.789867z"
+                  fill="#ffffff"
+                  p-id="9168"
+                ></path>
+                <path
+                  d="M512 529.066667v34.133333a34.133333 34.133333 0 0 1-34.133333 34.133333H238.933333a34.133333 34.133333 0 0 1-34.133333-34.133333v-34.133333h307.2z"
+                  fill="#ffffff"
+                  p-id="9169"
+                ></path></svg
+              >&nbsp;<span>{{ video.name }}</span></a
+            >
+          </div>
           <!-- <div class="hint">悬停播放 #{{ index + 1 }}</div> -->
         </div>
       </div>
@@ -92,7 +149,7 @@
           <div class="carousel-row-content">
             <div
               class="carousel-item"
-              v-for="(item, index) in duplicatedCarouselItems"
+              v-for="(item, index) in duplicatedCarouselItems1"
               :key="'right-' + index"
             >
               <img :src="item.src" :alt="'NFT ' + index" loading="lazy" />
@@ -114,7 +171,7 @@
 <script>
 import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
-
+// import { nftData } from "@/assets/js/art.js";
 export default {
   components: {
     headerVue,
@@ -125,100 +182,41 @@ export default {
       show_text: false,
       show_t1: false,
       videos: [
-        { src: require("@/assets/art/art1.mp4") },
-        { src: require("@/assets/art/art2.mp4") },
-        { src: require("@/assets/art/art3.mp4") },
-        { src: require("@/assets/art/art4.mp4") },
-        { src: require("@/assets/art/art4.mp4") },
+        { src: require("@/assets/art/art1.mp4"), name: "old_six" },
+        { src: require("@/assets/art/art2.mp4"), name: "old_six" },
+        { src: require("@/assets/art/art3.mp4"), name: "old_six" },
+        { src: require("@/assets/art/art4.mp4"), name: "old_six" },
+        { src: require("@/assets/art/art5.mp4"), name: "old_six" },
       ],
       video_img: [
-        require("@/assets/test_art/Charles97019791-1.jpg"),
-        require("@/assets/test_art/4.jpg"),
-        require("@/assets/test_art/4.jpg"),
-        require("@/assets/test_art/4.jpg"),
-        require("@/assets/test_art/4.jpg"),
-        require("@/assets/test_art/4.jpg"),
-      ],
-      video_index: -1,
-      carouselItems: [
-        {
-          src: require("@/assets/test_art/Charles97019791-1.jpg"),
-          name: "Kyrie tt.nad",
-          describe: "",
-          twitter: "https://x.com/Charles97019791",
-        },
         {
           src: require("@/assets/test_art/Charles97019791-2.jpg"),
           name: "Kyrie tt.nad",
-          describe: "",
           twitter: "https://x.com/Charles97019791",
         },
         {
-          src: require("@/assets/test_art/Charles97019791-3.jpg"),
+          src: require("@/assets/test_art/Charles97019791-1.jpg"),
           name: "Kyrie tt.nad",
-          describe: "",
           twitter: "https://x.com/Charles97019791",
         },
         {
-          src: require("@/assets/test_art/dj673285379-1.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
+          src: require("@/assets/test_art/depskydeps-1.jpg"),
+          name: "depskyyy",
+          twitter: "https://x.com/depskydeps",
         },
         {
-          src: require("@/assets/test_art/dj673285379-2.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
+          src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
+          name: "Dream ⨀",
+          twitter: "https://x.com/Dreamer117Zz",
         },
         {
-          src: require("@/assets/test_art/dj673285379-3.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
+          src: require("@/assets/test_art/depskydeps-3.jpg"),
+          name: "depskyyy",
+          twitter: "https://x.com/depskydeps",
         },
-        {
-          src: require("@/assets/test_art/HhhhHannah-1.jpg"),
-          name: "hannah_hhhh",
-          describe: "",
-          twitter: "https://x.com/HhhhHannah",
-        },
-        {
-          src: require("@/assets/test_art/HhhhHannah-2.jpg"),
-          name: "hannah_hhhh",
-          describe: "",
-          twitter: "https://x.com/HhhhHannah",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-1.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-2.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-3.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/melanthaia-1.jpg"),
-          name: "melanthaia",
-          describe: "",
-          twitter: "https://x.com/melanthaia",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-1.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
+      ],
+      video_index: -1,
+      carouselItems: [
         {
           src: require("@/assets/test_art/Mido_269-2.jpg"),
           name: "Midodo",
@@ -304,6 +302,86 @@ export default {
           twitter: "https://x.com/XHOYH",
         },
       ],
+      carouselItems1: [
+        {
+          src: require("@/assets/test_art/Charles97019791-1.jpg"),
+          name: "Kyrie tt.nad",
+          describe: "",
+          twitter: "https://x.com/Charles97019791",
+        },
+        {
+          src: require("@/assets/test_art/Charles97019791-2.jpg"),
+          name: "Kyrie tt.nad",
+          describe: "",
+          twitter: "https://x.com/Charles97019791",
+        },
+        {
+          src: require("@/assets/test_art/Charles97019791-3.jpg"),
+          name: "Kyrie tt.nad",
+          describe: "",
+          twitter: "https://x.com/Charles97019791",
+        },
+        {
+          src: require("@/assets/test_art/dj673285379-1.jpg"),
+          name: "J King",
+          describe: "",
+          twitter: "https://x.com/dj673285379",
+        },
+        {
+          src: require("@/assets/test_art/dj673285379-2.jpg"),
+          name: "J King",
+          describe: "",
+          twitter: "https://x.com/dj673285379",
+        },
+        {
+          src: require("@/assets/test_art/dj673285379-3.jpg"),
+          name: "J King",
+          describe: "",
+          twitter: "https://x.com/dj673285379",
+        },
+        {
+          src: require("@/assets/test_art/HhhhHannah-1.jpg"),
+          name: "hannah_hhhh",
+          describe: "",
+          twitter: "https://x.com/HhhhHannah",
+        },
+        {
+          src: require("@/assets/test_art/HhhhHannah-2.jpg"),
+          name: "hannah_hhhh",
+          describe: "",
+          twitter: "https://x.com/HhhhHannah",
+        },
+        {
+          src: require("@/assets/test_art/jaychen981111-1.jpg"),
+          name: "CHEN⌘",
+          describe: "",
+          twitter: "https://x.com/jaychen981111",
+        },
+        {
+          src: require("@/assets/test_art/jaychen981111-2.jpg"),
+          name: "CHEN⌘",
+          describe: "",
+          twitter: "https://x.com/jaychen981111",
+        },
+        {
+          src: require("@/assets/test_art/jaychen981111-3.jpg"),
+          name: "CHEN⌘",
+          describe: "",
+          twitter: "https://x.com/jaychen981111",
+        },
+        {
+          src: require("@/assets/test_art/melanthaia-1.jpg"),
+          name: "melanthaia",
+          describe: "",
+          twitter: "https://x.com/melanthaia",
+        },
+        {
+          src: require("@/assets/test_art/Mido_269-1.jpg"),
+          name: "Midodo",
+          describe: "",
+          twitter: "https://x.com/Mido_269",
+        },
+      ],
       floatingCardStyles: [
         {
           width: "400px",
@@ -350,6 +428,9 @@ export default {
   computed: {
     duplicatedCarouselItems() {
       return [...this.carouselItems, ...this.carouselItems];
+    },
+    duplicatedCarouselItems1() {
+      return [...this.carouselItems1, ...this.carouselItems1];
     },
   },
   mounted() {
@@ -437,7 +518,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    opacity: 0.3;
+    // opacity: 0.3;
     filter: blur(2px);
     pointer-events: none;
     animation: rotateLogo 30s linear infinite;
@@ -469,9 +550,35 @@ export default {
 
     video {
       width: 100%;
-      height: 100%;
+      height: 90%;
       object-fit: cover;
       border-radius: 15px;
+    }
+
+    .auther {
+      display: flex;
+      align-items: center;
+      height: 10%;
+      .link {
+        display: flex;
+        align-items: center;
+        height: 20px;
+        font-size: 20px;
+        line-height: 20px;
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          color: #836ef9;
+          .icon {
+            path {
+              fill: #836ef9;
+            }
+          }
+        }
+      }
     }
 
     .hint {
