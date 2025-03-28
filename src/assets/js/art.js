@@ -299,6 +299,24 @@ const artList = [
     describe: "",
     twitter: "https://x.com/Dreamer117Zz",
   },
+  {
+    src: require("@/assets/test_art/damiyahh8-1.jpg"),
+    name: "Damiyahh",
+    describe: "",
+    twitter: "https://x.com/damiyahh8",
+  },
+  {
+    src: require("@/assets/test_art/damiyahh8-2.jpg"),
+    name: "Damiyahh",
+    describe: "",
+    twitter: "https://x.com/damiyahh8",
+  },
+  {
+    src: require("@/assets/test_art/damiyahh8-3.jpg"),
+    name: "Damiyahh",
+    describe: "",
+    twitter: "https://x.com/damiyahh8",
+  },
 ];
 
 export { artList };
