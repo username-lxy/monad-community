@@ -317,6 +317,48 @@ const artList = [
     describe: "",
     twitter: "https://x.com/damiyahh8",
   },
+  {
+    src: require("@/assets/test_art/lambe1981-1.jpg"),
+    name: "lambe⦿nad",
+    describe: "",
+    twitter: "https://x.com/lambe1981",
+  },
+  {
+    src: require("@/assets/test_art/lambe1981-2.jpg"),
+    name: "lambe⦿nad",
+    describe: "",
+    twitter: "https://x.com/lambe1981",
+  },
+  {
+    src: require("@/assets/test_art/lambe1981-3.jpg"),
+    name: "lambe⦿nad",
+    describe: "",
+    twitter: "https://x.com/lambe1981",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-1.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-2.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-3.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-4.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
 ];
 
 export { artList };
