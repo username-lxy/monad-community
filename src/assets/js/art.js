@@ -1,5 +1,29 @@
 const artList = [
   {
+    src: require("@/assets/test_art/0xAmne-1.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-2.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-3.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
+    src: require("@/assets/test_art/0xAmne-4.jpg"),
+    name: "Amne ⨀",
+    describe: "",
+    twitter: "https://x.com/0xAmne",
+  },
+  {
     src: require("@/assets/test_art/Charles97019791-1.jpg"),
     name: "Kyrie tt.nad",
     describe: "",
@@ -88,6 +112,24 @@ const artList = [
     name: "Midodo",
     describe: "",
     twitter: "https://x.com/Mido_269",
+  },
+  {
+    src: require("@/assets/test_art/Dreamer117Zz-1.jpg"),
+    name: "Dream ⨀",
+    describe: "",
+    twitter: "https://x.com/Dreamer117Zz",
+  },
+  {
+    src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
+    name: "Dream ⨀",
+    describe: "",
+    twitter: "https://x.com/Dreamer117Zz",
+  },
+  {
+    src: require("@/assets/test_art/Dreamer117Zz-3.jpg"),
+    name: "Dream ⨀",
+    describe: "",
+    twitter: "https://x.com/Dreamer117Zz",
   },
   {
     src: require("@/assets/test_art/Pican0_o-3.jpg"),
@@ -282,24 +324,6 @@ const artList = [
     twitter: "https://x.com/depskydeps",
   },
   {
-    src: require("@/assets/test_art/Dreamer117Zz-1.jpg"),
-    name: "Dream ⨀",
-    describe: "",
-    twitter: "https://x.com/Dreamer117Zz",
-  },
-  {
-    src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
-    name: "Dream ⨀",
-    describe: "",
-    twitter: "https://x.com/Dreamer117Zz",
-  },
-  {
-    src: require("@/assets/test_art/Dreamer117Zz-3.jpg"),
-    name: "Dream ⨀",
-    describe: "",
-    twitter: "https://x.com/Dreamer117Zz",
-  },
-  {
     src: require("@/assets/test_art/damiyahh8-1.jpg"),
     name: "Damiyahh",
     describe: "",
@@ -334,30 +358,6 @@ const artList = [
     name: "lambe⦿nad",
     describe: "",
     twitter: "https://x.com/lambe1981",
-  },
-  {
-    src: require("@/assets/test_art/0xAmne-1.jpg"),
-    name: "Amne ⨀",
-    describe: "",
-    twitter: "https://x.com/0xAmne",
-  },
-  {
-    src: require("@/assets/test_art/0xAmne-2.jpg"),
-    name: "Amne ⨀",
-    describe: "",
-    twitter: "https://x.com/0xAmne",
-  },
-  {
-    src: require("@/assets/test_art/0xAmne-3.jpg"),
-    name: "Amne ⨀",
-    describe: "",
-    twitter: "https://x.com/0xAmne",
-  },
-  {
-    src: require("@/assets/test_art/0xAmne-4.jpg"),
-    name: "Amne ⨀",
-    describe: "",
-    twitter: "https://x.com/0xAmne",
   },
 ];
 
