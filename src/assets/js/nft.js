@@ -667,41 +667,41 @@ const home_nft = [
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0xa568cabe34c8ca0d2a8671009ae0f6486a314425",
   },
-  {
-    name: "Mondana Baddies",
-    twitter: "https://x.com/mondanabaddies",
-    avatar_url:
-      "https://pbs.twimg.com/profile_images/1891524079133294592/-N5CeJNL_400x400.jpg",
-    discord_url: "",
-    magiceden_url:
-      "https://magiceden.io/collections/monad-testnet/0x0f2f2da004acc38f05858f9dbc0320db64c1b6c9",
-  },
-  {
-    name: "Sealuminati",
-    twitter: "https://x.com/sealuminati",
-    avatar_url:
-      "https://pbs.twimg.com/profile_images/1891609634240331777/hDynHoVD_400x400.jpg",
-    discord_url: "https://discord.gg/VP5Tt5ccjb",
-    magiceden_url:
-      "https://magiceden.io/collections/monad-testnet/0x4870e911b1986c6822a171cdf91806c3d44ce235",
-  },
-  {
-    name: "Skrumpeys",
-    twitter: "https://x.com/skrumpeys",
-    avatar_url:
-      "https://pbs.twimg.com/profile_images/1808946473888845825/NfreVmT4_400x400.jpg",
-    discord_url: "",
-    magiceden_url:
-      "https://magiceden.io/collections/monad-testnet/0xe8f0635591190fb626f9d13c49b60626561ed145",
-  },
-  {
-    name: "The Daks",
-    twitter: "https://x.com/thedaks_png",
-    avatar_url:
-      "https://pbs.twimg.com/profile_images/1882118369119465472/wlG7yZLL_400x400.jpg",
-    discord_url: "https://discord.gg/thedaks",
-    magiceden_url:
-      "https://magiceden.io/collections/monad-testnet/0x78ed9a576519024357ab06d9834266a04c9634b7",
-  },
+  // {
+  //   name: "Mondana Baddies",
+  //   twitter: "https://x.com/mondanabaddies",
+  //   avatar_url:
+  //     "https://pbs.twimg.com/profile_images/1891524079133294592/-N5CeJNL_400x400.jpg",
+  //   discord_url: "",
+  //   magiceden_url:
+  //     "https://magiceden.io/collections/monad-testnet/0x0f2f2da004acc38f05858f9dbc0320db64c1b6c9",
+  // },
+  // {
+  //   name: "Sealuminati",
+  //   twitter: "https://x.com/sealuminati",
+  //   avatar_url:
+  //     "https://pbs.twimg.com/profile_images/1891609634240331777/hDynHoVD_400x400.jpg",
+  //   discord_url: "https://discord.gg/VP5Tt5ccjb",
+  //   magiceden_url:
+  //     "https://magiceden.io/collections/monad-testnet/0x4870e911b1986c6822a171cdf91806c3d44ce235",
+  // },
+  // {
+  //   name: "Skrumpeys",
+  //   twitter: "https://x.com/skrumpeys",
+  //   avatar_url:
+  //     "https://pbs.twimg.com/profile_images/1808946473888845825/NfreVmT4_400x400.jpg",
+  //   discord_url: "",
+  //   magiceden_url:
+  //     "https://magiceden.io/collections/monad-testnet/0xe8f0635591190fb626f9d13c49b60626561ed145",
+  // },
+  // {
+  //   name: "The Daks",
+  //   twitter: "https://x.com/thedaks_png",
+  //   avatar_url:
+  //     "https://pbs.twimg.com/profile_images/1882118369119465472/wlG7yZLL_400x400.jpg",
+  //   discord_url: "https://discord.gg/thedaks",
+  //   magiceden_url:
+  //     "https://magiceden.io/collections/monad-testnet/0x78ed9a576519024357ab06d9834266a04c9634b7",
+  // },
 ];
 export { nftData, home_nft };

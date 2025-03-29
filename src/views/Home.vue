@@ -280,17 +280,20 @@
         </div>
       </div>
     </div>
+    <art />
     <footerVue />
   </div>
 </template>
 <script>
 import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
+import art from "@/views/Art.vue";
 import { home_nft } from "@/assets/js/nft.js";
 export default {
   components: {
     headerVue,
     footerVue,
+    art,
   },
   data() {
     return {
