@@ -16,12 +16,10 @@
         >
           {{ item.name }}
         </li>
-        <li>
-          <a href="https://x.com/huahua3843" target="_blank">Contact Me</a>
-        </li>
       </ul>
       <div class="call">
-        <a href="https://x.com/monad_xyz" target="_blank">
+        <span>monad</span>
+        <a href="https://x.com/huahua3843" target="_blank">
           <svg
             t="1742673219379"
             class="icon img1"
@@ -58,6 +56,48 @@
           </svg>
         </a>
       </div>
+      <div class="call">
+        <span>huahua(website creator)</span>
+        <a href="https://x.com/monad_xyz" target="_blank">
+          <svg
+            t="1742673219379"
+            class="icon img1"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="15215"
+            width="40"
+            height="40"
+          >
+            <path
+              d="M44.928 85.312l362.432 484.672-364.672 394.112h82.048l319.36-344.96 257.92 344.96h279.296l-382.72-512 339.392-366.72h-82.048L561.856 403.008 324.288 85.312H44.928z m120.704 60.48h128.256l566.656 757.76H732.16L165.632 145.856z"
+              p-id="15216"
+              fill="#c0c0c0"
+            ></path>
+          </svg>
+        </a>
+        <a href="https://discord.gg/monad" target="_blank">
+          <svg
+            t="1743279478238"
+            class="icon img1"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="10334"
+            width="200"
+            height="200"
+          >
+            <path
+              d="M417.28 795.733333 429.226667 615.253333 756.906667 320C771.413333 306.773333 753.92 300.373333 734.72 311.893333L330.24 567.466667 155.306667 512C117.76 501.333333 117.333333 475.306667 163.84 456.533333L845.226667 193.706667C876.373333 179.626667 906.24 201.386667 894.293333 249.173333L778.24 795.733333C770.133333 834.56 746.666667 843.946667 714.24 826.026667L537.6 695.466667 452.693333 777.813333C442.88 787.626667 434.773333 795.733333 417.28 795.733333Z"
+              p-id="10335"
+              fill="#c0c0c0"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <!-- <div class="call">
+        <span>(website creator)</span>
+      </div> -->
       <div class="monad">M⨀NAD</div>
       <div class="copyright">
         © 2025 twitter
@@ -169,13 +209,17 @@ export default {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 30px;
-      margin-bottom: 40px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       text-align: center;
 
+      span {
+        font-size: 20px;
+      }
+
       .img1 {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         cursor: pointer;
 
         &:hover {

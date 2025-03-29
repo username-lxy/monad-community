@@ -5,7 +5,7 @@
         !isSolid ? 'nav-shadow' : 'nav-no-shadow'
       }`"
     >
-      <div href="#" class="logo">
+      <div href="#" class="logo" @click="changePage('/')">
         <img
           :src="[
             page == '/'
@@ -75,12 +75,19 @@
       </div>
     </div>
     <div :class="`show-list ${!show_ ? 'list_old' : 'hidden_list'}`">
-      <div v-for="(item, i) in tabData" :key="i" @click="changePage(item.page)">
-        {{ item.name }}
+      <div
+        v-for="(item, i) in tabData"
+        :key="i"
+        @click="changePage(item.page)"
+        @mouseenter="handleMouseEnter(i)"
+        @mouseleave="handleMouseLeave"
+      >
+        <img :src="tab_index == i ? item.src1 : item.src" alt="" class="" />
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -90,19 +97,25 @@ export default {
         {
           name: "HOME",
           page: "/",
+          src: require("@/assets/header/home.png"),
+          src1: require("@/assets/header/home_bright.png"),
         },
         {
           name: "NFT",
           page: "/Allnft",
+          src: require("@/assets/header/nft.png"),
+          src1: require("@/assets/header/nft_bright.png"),
         },
-        {
-          name: "ART",
-          page: "/Art",
-        },
+        // {
+        //   name: "ART",
+        //   page: "/Art",
+        // },
         // 星际艺术
         {
           name: "STELLARART",
           page: "/Draw",
+          src: require("@/assets/header/art.png"),
+          src1: require("@/assets/header/art_bright.png"),
         },
       ],
       isSolid: false,
@@ -116,6 +129,7 @@ export default {
         require("../assets/header/list_logo.png"),
         require("../assets/header/list_logo1.png"),
       ],
+      tab_index: -1,
     };
   },
   mounted() {
@@ -140,6 +154,12 @@ export default {
       //   console.log(this.$route, e);
       if (this.$route.path == e) return "";
       this.$router.push(e);
+    },
+    handleMouseEnter(i) {
+      this.tab_index = i;
+    },
+    handleMouseLeave() {
+      this.tab_index = -1;
     },
   },
 };
@@ -246,6 +266,21 @@ export default {
       &:hover {
         color: #fff;
         cursor: pointer;
+      }
+
+      img {
+        /* 禁止选中 */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        /* 禁止拖动 */
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
       }
     }
   }

@@ -26,7 +26,10 @@
     </div>
     <div class="page2">
       <div class="big_title container">
-        <div class="t1">Welcome to Monad NFT and the Art World</div>
+        <!-- <div class="t1">Welcome to Monad NFT and the Art World</div> -->
+        <div class="title_img">
+          <img src="@/assets/home/home_title1.png" alt="" />
+        </div>
         <div class="t2">
           <span>
             Monad is a high-speed, high-performance Layer 1 blockchain that
@@ -99,10 +102,13 @@
       </div>
     </div>
     <div class="page3">
-      <div class="big_title">
+      <div class="big_title container">
         <!-- NFT星云：Monad的数字疆域
 探索这些吉祥物背后的故事——它们是通往Monad生态的密钥，也是未来数字经济的脉动信号。 -->
-        <div class="t1">NFT Nebula: Monad's Digital Territory</div>
+        <div class="title_img">
+          <img src="@/assets/home/nft_title.png" alt="" />
+        </div>
+        <!-- <div class="t1">NFT Nebula: Monad's Digital Territory</div> -->
         <div class="t2">
           Explore the stories behind these mascots - they are the keys to the
           Monad ecosystem and the pulsating signals of the future digital
@@ -227,7 +233,10 @@
       <div class="mascot_1">
         <div class="nft"><img src="../assets/home/chog.png" alt="" /></div>
         <div class="details">
-          <div class="title">CHOG</div>
+          <!-- <div class="title">CHOG</div> -->
+          <div class="chog_title">
+            <img src="@/assets/home/chog_title.png" alt="" />
+          </div>
           <div class="p">
             <!-- 星辰修复者”，是Monad宇宙中的紫色光芒。它们修复破损星空，可爱又神秘。 -->
             <span
@@ -246,7 +255,10 @@
       <div class="mascot_2">
         <div class="nft"><img src="../assets/home/moyaki.png" alt="" /></div>
         <div class="details">
-          <div class="title">MOYAKI</div>
+          <!-- <div class="title">MOYAKI</div> -->
+          <div class="moyaki_title">
+            <img src="@/assets/home/moyaki_title.png" alt="" />
+          </div>
           <div class="p">
             <!-- “波浪引导者”，在星际水域中闪耀，鳞片如星光流动。它们指引旅人，优雅而神秘。 -->
             <span
@@ -264,7 +276,10 @@
       <div class="mascot_3">
         <div class="nft"><img src="../assets/home/molandak.png" alt="" /></div>
         <div class="details">
-          <div class="title">MOLANDAK</div>
+          <!-- <div class="title">MOLANDAK</div> -->
+          <div class="molandak_title">
+            <img src="@/assets/home/molandak_title.png" alt="" />
+          </div>
           <div class="p">
             <!-- “时间旅者”，是紫色刺猬形象的社区宠儿。顽皮又坚韧，它们活跃于时间交汇处。 -->
             <span
@@ -483,9 +498,18 @@ export default {
         -webkit-text-fill-color: transparent;
       }
 
+      .title_img {
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+          width: 1000px;
+        }
+      }
+
       .t2 {
         margin-top: 15px;
         font-size: 20px;
+        font-weight: 600;
         span {
           display: block;
         }
@@ -578,7 +602,6 @@ export default {
   .mascot_box {
     // position: relative;
     width: 100%;
-    margin-top: 100px;
 
     .mascot_1,
     .mascot_2,
@@ -592,8 +615,11 @@ export default {
           font-size: 100px;
           font-weight: 600;
         }
+
         .p {
+          margin-top: 40px;
           font-size: 25px;
+          font-weight: 600;
           span {
             display: block;
           }
@@ -610,6 +636,11 @@ export default {
       background-color: #ccfc3a; /* 背景色 */
       clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%); /* 梯形裁剪 */
       z-index: 3;
+
+      .chog_title {
+        width: 240px;
+        height: 73px;
+      }
 
       .nft {
         position: absolute;
@@ -648,12 +679,18 @@ export default {
       }
 
       .details {
-        top: 250px;
+        top: 280px;
         left: 200px;
         // color: #000;
         width: 950px;
+
+        .moyaki_title {
+          width: 326px;
+          height: 73px;
+        }
       }
     }
+
     .mascot_3 {
       // position: absolute;
       position: relative;
@@ -676,9 +713,14 @@ export default {
       }
 
       .details {
-        top: 230px;
+        top: 250px;
         right: 100px;
         width: 950px;
+
+        .molandak_title {
+          width: 477px;
+          height: 73px;
+        }
       }
     }
   }
@@ -686,15 +728,26 @@ export default {
   .page3 {
     // position: relative;
     padding-top: 100px;
+    padding-bottom: 100px;
     width: 100%;
+    background: url("../assets/home/nft_bg.png") no-repeat;
+    background-size: 100% 100%;
     .big_title {
       text-align: center;
+
+      .title_img {
+        text-align: center;
+        img {
+          width: 950px;
+        }
+      }
       .t1 {
         font-size: 40px;
       }
 
       .t2 {
         margin-top: 15px;
+        font-weight: 600;
         font-size: 20px;
       }
     }

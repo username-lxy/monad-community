@@ -26,7 +26,7 @@
             <source :src="video.src" type="video/mp4" />
           </video>
           <div class="auther" v-show="video_index == index">
-            <a href="" target="_blank" class="link"
+            <!-- <a href="" target="_blank" class="link"
               ><svg
                 t="1743086223225"
                 class="icon"
@@ -43,7 +43,7 @@
                   fill="#ffffff"
                 ></path></svg
               >&nbsp;<span>{{ video_img[index].name }}</span></a
-            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            > -->
             <a href="" target="_blank" class="link"
               ><svg
                 t="1743086319512"
@@ -75,7 +75,7 @@
                   fill="#ffffff"
                   p-id="9169"
                 ></path></svg
-              >&nbsp;<span>{{ video.name }}</span></a
+              >&nbsp;<span>{{ video_img[index].name }}&nbsp;&nbsp;&nbsp;</span></a
             >
           </div>
           <!-- <div class="hint">悬停播放 #{{ index + 1 }}</div> -->
@@ -85,7 +85,7 @@
 
     <div class="page2 container">
       <div :class="`title ${show_text ? 'show-title' : ''}`">
-        Espectro de Arte de Monad
+        Our Awesome Monartists
       </div>
       <div :class="`t ${show_t1 ? 'fall-enter-active' : ''}`">
         In Monad's digital galaxy, artists use light and shadow as ink and speed
@@ -183,37 +183,37 @@ export default {
       show_text: false,
       show_t1: false,
       videos: [
-        { src: require("@/assets/art/art1.mp4"), name: "old_six" },
-        { src: require("@/assets/art/art2.mp4"), name: "old_six" },
-        { src: require("@/assets/art/art3.mp4"), name: "old_six" },
-        { src: require("@/assets/art/art4.mp4"), name: "old_six" },
-        { src: require("@/assets/art/art5.mp4"), name: "old_six" },
+        { src: require("@/assets/art/neo.mp4") },
+        { src: require("@/assets/art/pipeline.mp4") },
+        { src: require("@/assets/art/grimjow.mp4") },
+        { src: require("@/assets/art/old_six.mp4") },
+        { src: require("@/assets/art/capas.mp4") },
       ],
       video_img: [
         {
-          src: require("@/assets/test_art/Charles97019791-2.jpg"),
-          name: "Kyrie tt.nad",
-          twitter: "https://x.com/Charles97019791",
+          src: require("@/assets/art/neo.png"),
+          name: "Neo",
+          twitter: "https://x.com/neo_nca",
         },
         {
-          src: require("@/assets/test_art/Charles97019791-1.jpg"),
-          name: "Kyrie tt.nad",
-          twitter: "https://x.com/Charles97019791",
+          src: require("@/assets/art/pipeline.png"),
+          name: "The Pipeline",
+          twitter: "https://x.com/pipeline_xyz",
         },
         {
-          src: require("@/assets/test_art/depskydeps-1.jpg"),
-          name: "depskyyy",
-          twitter: "https://x.com/depskydeps",
+          src: require("@/assets/art/grimjow.png"),
+          name: "Grimjow",
+          twitter: "https://x.com/0xGrimjow",
         },
         {
-          src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
-          name: "Dream ⨀",
-          twitter: "https://x.com/Dreamer117Zz",
+          src: require("@/assets/art/old_six.png"),
+          name: "Old 6",
+          twitter: "https://x.com/Old_6_",
         },
         {
-          src: require("@/assets/test_art/depskydeps-3.jpg"),
-          name: "depskyyy",
-          twitter: "https://x.com/depskydeps",
+          src: require("@/assets/art/capas.png"),
+          name: "Capas",
+          twitter: "https://x.com/Dimavolshebnik",
         },
       ],
       video_index: -1,
@@ -458,9 +458,9 @@ export default {
       ],
       rawCardStyles: [
         {
-          width: "400px",
+          width: "430px",
           height: "300px",
-          top: "30px",
+          top: "20px",
           left: "2%",
           "--rotation": "-8deg",
         },
@@ -474,23 +474,23 @@ export default {
         },
         {
           width: "300px",
-          height: "200px",
+          height: "300px",
           top: "19px",
           right: "18%",
           "--rotation": "9deg",
           animationDelay: "-1.6s",
         },
         {
-          width: "400px",
+          width: "420px",
           height: "300px",
           top: "150px",
-          right: "2%",
+          right: "1%",
           "--rotation": "-2deg",
           animationDelay: "-2.4s",
         },
         {
-          width: "460px",
-          height: "300px",
+          width: "350px",
+          height: "350px",
           top: "400px",
           right: "8%",
           "--rotation": "2deg",
@@ -581,8 +581,9 @@ export default {
   margin-top: 100px;
   padding: 50px 0;
   position: relative;
-  height: calc(100vh - 100px);
-  min-height: 850px;
+  // height: calc(100vh - 100px);
+  height: 1110px;
+  // min-height: 850px;
   overflow: hidden;
 
   &::before {
@@ -637,7 +638,9 @@ export default {
     .auther {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       height: 10%;
+
       .link {
         display: flex;
         align-items: center;
