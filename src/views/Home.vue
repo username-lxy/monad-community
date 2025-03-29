@@ -98,63 +98,6 @@
         </div>
       </div>
     </div>
-    <div class="mascot_box">
-      <div class="mascot_1">
-        <div class="nft"><img src="../assets/home/chog.png" alt="" /></div>
-        <div class="details">
-          <div class="title">CHOG</div>
-          <div class="p">
-            <!-- 星辰修复者”，是Monad宇宙中的紫色光芒。它们修复破损星空，可爱又神秘。 -->
-            <span
-              >· The 'Star Repairer' is the purple light in the Monad universe.
-            </span>
-            <span>
-              · They repair damaged starry skies, cute and mysterious.
-            </span>
-            <span
-              >· Chog is the house for the wise and industrious who value
-              intellect, strategy, and tireless work ethic.</span
-            >
-          </div>
-        </div>
-      </div>
-      <div class="mascot_2">
-        <div class="nft"><img src="../assets/home/moyaki.png" alt="" /></div>
-        <div class="details">
-          <div class="title">MOYAKI</div>
-          <div class="p">
-            <!-- “波浪引导者”，在星际水域中闪耀，鳞片如星光流动。它们指引旅人，优雅而神秘。 -->
-            <span
-              >· The 'Wave Navigator' shines in the interstellar waters, with
-              scales flowing like starlight. They guide travelers, elegant and
-              mysterious.
-            </span>
-            <span
-              >· Moyaki swims for those who rise from humble beginnings with an
-              unyielding drive to succeed.</span
-            >
-          </div>
-        </div>
-      </div>
-      <div class="mascot_3">
-        <div class="nft"><img src="../assets/home/molandak.png" alt="" /></div>
-        <div class="details">
-          <div class="title">MOLANDAK</div>
-          <div class="p">
-            <!-- “时间旅者”，是紫色刺猬形象的社区宠儿。顽皮又坚韧，它们活跃于时间交汇处。 -->
-            <span
-              >· Time Traveler "is the darling of the community with the image
-              of a purple hedgehog. Naughty and resilient, they are active at
-              the intersection of time.
-            </span>
-            <span
-              >· Known for courage and tradition, Molandak is home to the
-              brave-hearted who rip challenges head-on.
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="page3">
       <div class="big_title">
         <!-- NFT星云：Monad的数字疆域
@@ -276,6 +219,63 @@
                 </svg>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mascot_box">
+      <div class="mascot_1">
+        <div class="nft"><img src="../assets/home/chog.png" alt="" /></div>
+        <div class="details">
+          <div class="title">CHOG</div>
+          <div class="p">
+            <!-- 星辰修复者”，是Monad宇宙中的紫色光芒。它们修复破损星空，可爱又神秘。 -->
+            <span
+              >· The 'Star Repairer' is the purple light in the Monad universe.
+            </span>
+            <span>
+              · They repair damaged starry skies, cute and mysterious.
+            </span>
+            <span
+              >· Chog is the house for the wise and industrious who value
+              intellect, strategy, and tireless work ethic.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mascot_2">
+        <div class="nft"><img src="../assets/home/moyaki.png" alt="" /></div>
+        <div class="details">
+          <div class="title">MOYAKI</div>
+          <div class="p">
+            <!-- “波浪引导者”，在星际水域中闪耀，鳞片如星光流动。它们指引旅人，优雅而神秘。 -->
+            <span
+              >· The 'Wave Navigator' shines in the interstellar waters, with
+              scales flowing like starlight. They guide travelers, elegant and
+              mysterious.
+            </span>
+            <span
+              >· Moyaki swims for those who rise from humble beginnings with an
+              unyielding drive to succeed.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mascot_3">
+        <div class="nft"><img src="../assets/home/molandak.png" alt="" /></div>
+        <div class="details">
+          <div class="title">MOLANDAK</div>
+          <div class="p">
+            <!-- “时间旅者”，是紫色刺猬形象的社区宠儿。顽皮又坚韧，它们活跃于时间交汇处。 -->
+            <span
+              >· Time Traveler "is the darling of the community with the image
+              of a purple hedgehog. Naughty and resilient, they are active at
+              the intersection of time.
+            </span>
+            <span
+              >· Known for courage and tradition, Molandak is home to the
+              brave-hearted who rip challenges head-on.
+            </span>
           </div>
         </div>
       </div>
@@ -578,6 +578,7 @@ export default {
   .mascot_box {
     // position: relative;
     width: 100%;
+    margin-top: 100px;
 
     .mascot_1,
     .mascot_2,

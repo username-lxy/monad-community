@@ -164,7 +164,7 @@
       </section>
     </div>
 
-    <footerVue />
+    <!-- <footerVue /> -->
   </div>
 </template>
 
