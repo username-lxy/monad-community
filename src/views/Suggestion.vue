@@ -16,6 +16,10 @@
       </div>
     </div>
     <div class="contributors-section container">
+      <span class="tips">
+        (tips:The ranking is not in any particular order, arranged in
+        alphabetical order according to the first letter of the X account)
+      </span>
       <div class="contributors-grid">
         <a
           class="contributor-card"
@@ -218,6 +222,13 @@ export default {
   color: #fff;
   position: relative;
   overflow: hidden;
+
+  .tips {
+    display: block;
+    margin: 0 40px 20px;
+    height: 30px;
+    font-size: 16px;
+  }
 }
 
 .contributors-section::before {
@@ -314,7 +325,7 @@ export default {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 70px;
+  //   height: 70px;
   //   text-transform: uppercase;
   //   font-weight: 500;
 }

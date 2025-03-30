@@ -359,6 +359,24 @@ const artList = [
     describe: "",
     twitter: "https://x.com/lambe1981",
   },
+  {
+    src: require("@/assets/test_art/safas4461319-1.jpg"),
+    name: "shimis💜",
+    describe: "",
+    twitter: "https://x.com/safas4461319",
+  },
+  {
+    src: require("@/assets/test_art/safas4461319-2.jpg"),
+    name: "shimis💜",
+    describe: "",
+    twitter: "https://x.com/safas4461319",
+  },
+  {
+    src: require("@/assets/test_art/safas4461319-3.jpg"),
+    name: "shimis💜",
+    describe: "",
+    twitter: "https://x.com/safas4461319",
+  },
 ];
 
 // function fn(list) {

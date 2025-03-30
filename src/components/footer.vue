@@ -62,7 +62,7 @@
       <div class="foot_bottom">
         <div class="call">
           <span>monad</span>
-          <a href="https://x.com/huahua3843" target="_blank">
+          <a href="https://x.com/monad_xyz" target="_blank">
             <svg
               t="1742673219379"
               class="icon img1"
