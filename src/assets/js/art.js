@@ -361,4 +361,149 @@ const artList = [
   },
 ];
 
+// function fn(list) {
+//   const arr = [...list];
+//   const abs = [];
+//   const name = [];
+//   arr.forEach((item, i) => {
+//     console.log(name.indexOf(item.twitter));
+//     if (name.indexOf(item.twitter) == -1) {
+//       abs.push(item);
+//       name.push(item.twitter);
+//     }
+//   });
+//   console.log(abs);
+// }
+// fn(artList);
+// const table = [
+//   {
+//     src: "/img/0xAmne-1.fc8689b9.jpg",
+//     name: "Amne ⨀",
+//     describe: "",
+//     twitter: "https://x.com/0xAmne",
+//   },
+//   {
+//     src: "/img/Charles97019791-1.5e7bb52d.jpg",
+//     name: "Kyrie tt.nad",
+//     describe: "",
+//     twitter: "https://x.com/Charles97019791",
+//   },
+//   {
+//     src: "/img/dj673285379-1.b6491777.jpg",
+//     name: "J King",
+//     describe: "",
+//     twitter: "https://x.com/dj673285379",
+//   },
+//   {
+//     src: "/img/HhhhHannah-1.e0d7b7aa.jpg",
+//     name: "hannah_hhhh",
+//     describe: "",
+//     twitter: "https://x.com/HhhhHannah",
+//   },
+//   {
+//     src: "/img/jaychen981111-1.51dfcfbb.jpg",
+//     name: "CHEN⌘",
+//     describe: "",
+//     twitter: "https://x.com/jaychen981111",
+//   },
+//   {
+//     src: "/img/melanthaia-1.5eaaf437.jpg",
+//     name: "melanthaia",
+//     describe: "",
+//     twitter: "https://x.com/melanthaia",
+//   },
+//   {
+//     src: "/img/Mido_269-1.3df5be8f.jpg",
+//     name: "Midodo",
+//     describe: "",
+//     twitter: "https://x.com/Mido_269",
+//   },
+//   {
+//     src: "/img/Dreamer117Zz-1.8ef885e7.jpg",
+//     name: "Dream ⨀",
+//     describe: "",
+//     twitter: "https://x.com/Dreamer117Zz",
+//   },
+//   {
+//     src: "/img/Pican0_o-3.6495ad84.jpg",
+//     name: "Picano",
+//     describe: "",
+//     twitter: "https://x.com/Pican0_o",
+//   },
+//   {
+//     src: "/img/Polly_r7-1.60e72ac9.jpg",
+//     name: "Pollyyyyy",
+//     describe: "",
+//     twitter: "https://x.com/Polly_r7",
+//   },
+//   {
+//     src: "/img/XHOYH-1.45cd7645.jpg",
+//     name: "Huan",
+//     describe: "",
+//     twitter: "https://x.com/XHOYH",
+//   },
+//   {
+//     src: "/img/faber4904-2.074904aa.jpg",
+//     name: "Faber",
+//     describe: "",
+//     twitter: "https://x.com/faber4904",
+//   },
+//   {
+//     src: "/img/uuprc11476591-1.afc531a7.jpg",
+//     name: "Lewis Herring",
+//     describe: "",
+//     twitter: "https://x.com/uuprc11476591",
+//   },
+//   {
+//     src: "/img/totomal090202-1.17346881.jpg",
+//     name: "toto",
+//     describe: "",
+//     twitter: "https://x.com/totomal090202",
+//   },
+//   {
+//     src: "/img/ghooolyache-1.dbf9df2f.jpg",
+//     name: "ghooolyache",
+//     describe: "",
+//     twitter: "https://x.com/ghooolyache",
+//   },
+//   {
+//     src: "/img/_Kristina8888-1.3542fc6f.jpg",
+//     name: "Kristina⌘",
+//     describe: "",
+//     twitter: "https://x.com/_Kristina8888",
+//   },
+//   {
+//     src: "/img/0xpotatoking-1.96438597.jpg",
+//     name: "Potato King",
+//     describe: "",
+//     twitter: "https://x.com/0xpotatoking",
+//   },
+//   {
+//     src: "/img/depskydeps-1.a72bb927.jpg",
+//     name: "depskyyy",
+//     describe: "",
+//     twitter: "https://x.com/depskydeps",
+//   },
+//   {
+//     src: "/img/damiyahh8-1.0aa74138.jpg",
+//     name: "Damiyahh",
+//     describe: "",
+//     twitter: "https://x.com/damiyahh8",
+//   },
+//   {
+//     src: "/img/lambe1981-1.f1d09484.jpg",
+//     name: "lambe⦿nad",
+//     describe: "",
+//     twitter: "https://x.com/lambe1981",
+//   },
+// ];
+// const csvData = [
+//   ["src", "name","twitter"], // 表头
+//   ...table.map((item) => [
+//     item.src,
+//     item.name,
+//     item.twitter || "N/A",
+//   ]),
+// ].join("\n");
+// console.log(csvData);
 export { artList };

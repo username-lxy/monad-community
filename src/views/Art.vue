@@ -44,7 +44,7 @@
                 ></path></svg
               >&nbsp;<span>{{ video_img[index].name }}</span></a
             > -->
-            <a href="" target="_blank" class="link"
+            <a :href="video_img[index].twitter" target="_blank" class="link"
               ><svg
                 t="1743086319512"
                 class="icon"
@@ -514,7 +514,7 @@ export default {
     },
   },
   mounted() {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     this.initCarouselHover();
     this.setupIntersectionObserver()
   },

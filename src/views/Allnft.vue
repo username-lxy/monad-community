@@ -191,6 +191,7 @@ export default {
       transform: translateY(0); /* 掉落到最终位置 */
     }
   }
+  
   .all_nft {
     display: flex;
     justify-content: flex-start;

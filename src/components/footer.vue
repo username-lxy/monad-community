@@ -127,6 +127,10 @@ export default {
           name: "ART",
           page: "/Draw",
         },
+        {
+          name: "CONTRIBUTOR",
+          page: "/Suggestion",
+        },
       ],
     };
   },
@@ -147,7 +151,7 @@ export default {
   // margin-top: 200px;
   padding-top: 200px;
   position: relative;
-  min-height: 795px; /* 确保有高度 */
+  min-height: 845px; /* 确保有高度 */
   overflow: hidden; /* 防止溢出 */
 
   .footer_logo {
