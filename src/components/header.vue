@@ -106,13 +106,8 @@ export default {
           src: require("@/assets/header/nft.png"),
           src1: require("@/assets/header/nft_bright.png"),
         },
-        // {
-        //   name: "ART",
-        //   page: "/Art",
-        // },
-        // 星际艺术
         {
-          name: "STELLARART",
+          name: "Art",
           page: "/Draw",
           src: require("@/assets/header/art.png"),
           src1: require("@/assets/header/art_bright.png"),

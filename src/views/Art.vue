@@ -75,7 +75,9 @@
                   fill="#ffffff"
                   p-id="9169"
                 ></path></svg
-              >&nbsp;<span>{{ video_img[index].name }}&nbsp;&nbsp;&nbsp;</span></a
+              >&nbsp;<span
+                >{{ video_img[index].name }}&nbsp;&nbsp;&nbsp;</span
+              ></a
             >
           </div>
           <!-- <div class="hint">悬停播放 #{{ index + 1 }}</div> -->
@@ -83,7 +85,7 @@
       </div>
     </section>
 
-    <div class="page2 container">
+    <div class="page2 container" ref="page2Element">
       <div :class="`title ${show_text ? 'show-title' : ''}`">
         Our Awesome Monartists
       </div>
@@ -513,21 +515,12 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
-    window.addEventListener("scroll", this.handleScroll);
     this.initCarouselHover();
+    this.setupIntersectionObserver()
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll() {
-      if (window.scrollY > 200) {
-        this.show_text = true;
-        setTimeout(() => {
-          this.show_t1 = true;
-        }, 3000);
-      }
-    },
     changePage() {
       this.$router.push("/Draw");
     },
@@ -559,6 +552,30 @@ export default {
           content.style.animationPlayState = "running";
         });
       });
+    },
+    // 动态展示-打字机
+    setupIntersectionObserver() {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.show_text = true;
+              setTimeout(() => {
+                this.show_t1 = true;
+              }, 3000);
+              // 可以在这里取消观察，如果只需要触发一次
+              // observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1, // 当元素10%可见时触发
+        }
+      );
+
+      if (this.$refs.page2Element) {
+        observer.observe(this.$refs.page2Element);
+      }
     },
   },
 };
