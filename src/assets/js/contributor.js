@@ -221,6 +221,15 @@ const user_list = [
       "I'm on this account until my main account is fixed | Surrendered to the @monad_xyz | İntern @pipeline_xyz",
   },
   {
+    name: "Paul Nguyen ⨀",
+    tw: "paulnguyen_z2z",
+    twitter: "https://x.com/paulnguyen_z2z",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1904936895723036677/Blo75GQ2_400x400.jpg",
+    introduce:
+      "@moyaking_xyz👑 @mondaos_xyz | Contributor @monad_xyz💜",
+  },
+  {
     name: "Picano",
     tw: "Pican0_o",
     twitter: "https://x.com/Pican0_o",
