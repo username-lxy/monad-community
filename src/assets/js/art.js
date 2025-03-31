@@ -60,6 +60,12 @@ const artList = [
     twitter: "https://x.com/dj673285379",
   },
   {
+    src: require("@/assets/test_art/dj673285379-4.jpg"),
+    name: "J King",
+    describe: "",
+    twitter: "https://x.com/dj673285379",
+  },
+  {
     src: require("@/assets/test_art/HhhhHannah-1.jpg"),
     name: "hannah_hhhh",
     describe: "",
@@ -121,12 +127,6 @@ const artList = [
   },
   {
     src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
-    name: "Dream ⨀",
-    describe: "",
-    twitter: "https://x.com/Dreamer117Zz",
-  },
-  {
-    src: require("@/assets/test_art/Dreamer117Zz-3.jpg"),
     name: "Dream ⨀",
     describe: "",
     twitter: "https://x.com/Dreamer117Zz",

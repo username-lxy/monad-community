@@ -276,7 +276,14 @@ const nftData = [
     discord_url: "https://discord.com/invite/2cTNYqCS9R",
     magiceden_url: "",
   },
-
+  {
+    name: "RealNads",
+    twitter: "https://x.com/RealNadsClub",
+    avatar_url:
+      "https://pbs.twimg.com/profile_images/1888607731390828545/V2s-VT4p_400x400.jpg",
+    discord_url: "https://t.co/7fc5iq91fu",
+    magiceden_url: "https://magiceden.io/collections/monad-testnet/0x0bbf4a69f5e20ddf2244add5fc412b9631a2cba1",
+  },
   {
     name: "Legends of Hearts",
     twitter: "https://x.com/loh_online",
