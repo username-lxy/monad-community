@@ -128,7 +128,7 @@ export default {
           page: "/Draw",
         },
         {
-          name: "CONTRIBUTOR",
+          name: "CONTRIBUTORS",
           page: "/Suggestion",
         },
       ],

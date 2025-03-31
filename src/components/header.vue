@@ -82,7 +82,11 @@
         @mouseenter="handleMouseEnter(i)"
         @mouseleave="handleMouseLeave"
       >
-        <img :src="tab_index == i ? item.src1 : item.src" alt="" class="" />
+        <img
+          :src="tab_index == i ? item.src1 : item.src"
+          alt=""
+          :class="item.name == 'Suggestion' ? 'img_Suggestion' : ''"
+        />
       </div>
     </div>
   </div>
@@ -111,6 +115,12 @@ export default {
           page: "/Draw",
           src: require("@/assets/header/art.png"),
           src1: require("@/assets/header/art_bright.png"),
+        },
+        {
+          name: "Suggestion",
+          page: "/Suggestion",
+          src: require("@/assets/header/contributors.png"),
+          src1: require("@/assets/header/contributors_bright.png"),
         },
       ],
       isSolid: false,
@@ -276,6 +286,10 @@ export default {
         -moz-user-drag: none;
         -o-user-drag: none;
         user-drag: none;
+      }
+
+      .img_Suggestion {
+        height: 65px;
       }
     }
   }
