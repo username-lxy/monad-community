@@ -264,15 +264,15 @@ const user_list = [
     introduce:
       "GO TO NEW WORLD | The official Monad Twitter account | @monad_xyz | The official Chinese region Twitter account | @monad_zw | Discord：shimis_88",
   },
-  // {
-  //   name: "sss",
-  //   tw: "mannaspirit1",
-  //   twitter: "https://x.com/mannaspirit1",
-  //   avatar:
-  //     "https://pbs.twimg.com/profile_images/1815799044666769408/ny3cgszW_400x400.png",
-  //   introduce:
-  //     "Gmonad💜@monad_xyz | Team pixel artist： @spikynads | Intern: @pipeline_xyz",
-  // },
+  {
+    name: "sss",
+    tw: "mannaspirit1",
+    twitter: "https://x.com/mannaspirit1",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1815799044666769408/ny3cgszW_400x400.png",
+    introduce:
+      "Gmonad💜@monad_xyz | Team pixel artist： @spikynads | Intern: @pipeline_xyz",
+  },
   {
     name: "toto",
     tw: "totomal090202",
