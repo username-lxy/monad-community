@@ -159,14 +159,6 @@ const nftData = [
       "https://magiceden.io/collections/monad-testnet/0x9ac5998884cf59d8a87dfc157560c1f0e1672e04",
   },
   {
-    name: "Sakura Spirits",
-    twitter: "https://x.com/_sakuraspirits_",
-    avatar_url:
-      "https://pbs.twimg.com/profile_images/1894030260431171584/kbKgxWwo_400x400.jpg",
-    discord_url: "https://discord.com/invite/sakuraspirits",
-    magiceden_url: "",
-  },
-  {
     name: "Overnads",
     twitter: "https://x.com/overnads",
     avatar_url:
