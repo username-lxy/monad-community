@@ -3,7 +3,7 @@ const nftData = [
     name: "Lil chogstars",
     twitter: "https://x.com/chogstarrr",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1873669135856754688/HgXtGh00_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1909303079549517825/bHXZExfo_400x400.jpg",
     discord_url: "https://discord.com/invite/chogstars",
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0x26c86f2835c114571df2b6ce9ba52296cc0fa6bb",

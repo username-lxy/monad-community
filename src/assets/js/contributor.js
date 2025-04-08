@@ -274,7 +274,7 @@ const user_list = [
       "GO TO NEW WORLD | The official Monad Twitter account | @monad_xyz | The official Chinese region Twitter account | @monad_zw | Discord：shimis_88",
   },
   {
-    name: "sss",
+    name: "sss💜",
     tw: "mannaspirit1",
     twitter: "https://x.com/mannaspirit1",
     avatar:

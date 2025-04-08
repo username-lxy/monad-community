@@ -383,6 +383,30 @@ const artList = [
     describe: "",
     twitter: "https://x.com/paulnguyen_z2z",
   },
+  {
+    src: require("@/assets/test_art/mannaspirit1-1.gif"),
+    name: "sss💜",
+    describe: "",
+    twitter: "https://x.com/mannaspirit1",
+  },
+  {
+    src: require("@/assets/test_art/mannaspirit1-2.gif"),
+    name: "sss💜",
+    describe: "",
+    twitter: "https://x.com/mannaspirit1",
+  },
+  {
+    src: require("@/assets/test_art/mannaspirit1-3.jpg"),
+    name: "sss💜",
+    describe: "",
+    twitter: "https://x.com/mannaspirit1",
+  },
+  {
+    src: require("@/assets/test_art/mannaspirit1-4.gif"),
+    name: "sss💜",
+    describe: "",
+    twitter: "https://x.com/mannaspirit1",
+  },
 ];
 
 export { artList };
