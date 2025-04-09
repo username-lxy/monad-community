@@ -238,7 +238,7 @@
             <img src="@/assets/home/chog_title.png" alt="" />
           </div>
           <div class="p">
-            <!-- 星辰修复者”，是Monad宇宙中的紫色光芒。它们修复破损星空，可爱又神秘。 -->
+            <!-- 星辰修复者"，是Monad宇宙中的紫色光芒。它们修复破损星空，可爱又神秘。 -->
             <span
               >· The 'Star Repairer' is the purple light in the Monad universe.
             </span>
@@ -260,7 +260,7 @@
             <img src="@/assets/home/moyaki_title.png" alt="" />
           </div>
           <div class="p">
-            <!-- “波浪引导者”，在星际水域中闪耀，鳞片如星光流动。它们指引旅人，优雅而神秘。 -->
+            <!-- "波浪引导者"，在星际水域中闪耀，鳞片如星光流动。它们指引旅人，优雅而神秘。 -->
             <span
               >· The 'Wave Navigator' shines in the interstellar waters, with
               scales flowing like starlight. They guide travelers, elegant and
@@ -281,7 +281,7 @@
             <img src="@/assets/home/molandak_title.png" alt="" />
           </div>
           <div class="p">
-            <!-- “时间旅者”，是紫色刺猬形象的社区宠儿。顽皮又坚韧，它们活跃于时间交汇处。 -->
+            <!-- "时间旅者"，是紫色刺猬形象的社区宠儿。顽皮又坚韧，它们活跃于时间交汇处。 -->
             <span
               >· Time Traveler "is the darling of the community with the image
               of a purple hedgehog. Naughty and resilient, they are active at
@@ -296,6 +296,7 @@
       </div>
     </div>
     <art />
+    <div @click="submit">提交</div>
     <footerVue />
   </div>
 </template>
@@ -304,6 +305,7 @@ import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import art from "@/views/Art.vue";
 import { home_nft } from "@/assets/js/nft.js";
+import { post_sggestions } from "@/assets/js/draw.js";
 export default {
   components: {
     headerVue,
@@ -372,6 +374,17 @@ export default {
     });
   },
   methods: {
+    async submit() {
+      try {
+        console.log('开始提交...');
+        const data = await post_sggestions("https://x.com/Reum_House", "测试");
+        console.log('提交成功:', data);
+        alert('提交成功！');
+      } catch (error) {
+        console.error('提交失败:', error);
+        alert(`提交失败: ${error}`);
+      }
+    },
     changePage() {
       this.$router.push("/Allnft");
     },

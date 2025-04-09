@@ -16,3 +16,25 @@ export const getImg = (params) => {
 //     data,
 //   });
 // };
+// 提交建议
+export const post_sggestions = (twitter, suggestion) => {
+  console.log('提交建议:', { twitter, suggestion });
+  return serviceAxios({
+    url: "/suggestions",
+    method: "post",
+    data: {
+      twitter,
+      suggestion
+    }
+  }).catch(error => {
+    console.error('提交建议失败:', error);
+    throw error;
+  });
+};
+
+// 获取所有建议
+export const get_sggestions = () => {
+  return serviceAxios({
+    url: "/suggestions",
+  });
+};
