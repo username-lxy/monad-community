@@ -1,10 +1,19 @@
 <template>
   <div id="app">
     <router-view />
+    <FeedbackButton />
   </div>
 </template>
+
 <script>
-export default {};
+import FeedbackButton from './components/FeedbackButton.vue'
+
+export default {
+  name: 'App',
+  components: {
+    FeedbackButton
+  }
+};
 </script>
 
 <style>
