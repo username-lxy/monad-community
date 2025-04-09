@@ -18,13 +18,11 @@ export const getImg = (params) => {
 // };
 // 提交建议
 export const post_sggestions = (data) => {
-  console.log('提交建议:', { twitter, suggestion });
   return serviceAxios({
     url: "/suggestions",
     method: "post",
     data
   }).catch(error => {
-    console.error('提交建议失败:', error);
     throw error;
   });
 };

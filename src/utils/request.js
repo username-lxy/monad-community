@@ -15,11 +15,11 @@ const serviceAxios = axios.create({
 // 创建请求拦截
 serviceAxios.interceptors.request.use(
   (config) => {
-    console.log("发送请求:", config.url, config.data);
+    // console.log("发送请求:", config.url, config.data);
     return config;
   },
   (error) => {
-    console.error("请求错误:", error);
+    // console.error("请求错误:", error);
     return Promise.reject(error);
   }
 );
@@ -27,11 +27,11 @@ serviceAxios.interceptors.request.use(
 // 创建响应拦截
 serviceAxios.interceptors.response.use(
   (res) => {
-    console.log("响应成功:", res.data);
+    // console.log("响应成功:", res.data);
     return res.data;
   },
   (error) => {
-    console.error("响应错误:", error.response || error);
+    // console.error("响应错误:", error.response || error);
     let message = "";
     if (error.response) {
       switch (error.response.status) {
