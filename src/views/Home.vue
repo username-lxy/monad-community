@@ -296,7 +296,6 @@
       </div>
     </div>
     <art />
-    <div @click="submit">提交</div>
     <footerVue />
   </div>
 </template>
@@ -305,7 +304,6 @@ import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import art from "@/views/Art.vue";
 import { home_nft } from "@/assets/js/nft.js";
-import { post_sggestions } from "@/assets/js/draw.js";
 export default {
   components: {
     headerVue,
@@ -374,17 +372,6 @@ export default {
     });
   },
   methods: {
-    async submit() {
-      try {
-        console.log('开始提交...');
-        const data = await post_sggestions("https://x.com/Reum_House", "测试");
-        console.log('提交成功:', data);
-        alert('提交成功！');
-      } catch (error) {
-        console.error('提交失败:', error);
-        alert(`提交失败: ${error}`);
-      }
-    },
     changePage() {
       this.$router.push("/Allnft");
     },

@@ -2,41 +2,29 @@
   <div>
     <div class="feedback-container">
       <button class="feedback-button" @click="showModal = true">
-        <svg t="1742672913599" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10460" width="32" height="32">
-          <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" fill="#9f7aea" p-id="10461"></path>
-          <path d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372 372-166.6 372-372-166.6-372-372-372z m171.8 527.1c1.2 1.5 1.9 3.3 1.9 5.2 0 4.5-3.6 8-8 8l-66-0.3-99.3-118.4-99.3 118.5-66.1 0.3c-4.4 0-8-3.6-8-8 0-1.9 0.7-3.7 1.9-5.2L471 512l-130.1-155.1c-1.2-1.5-1.9-3.3-1.9-5.2 0-4.4 3.6-8 8-8l66.1 0.3 99.3 118.4 99.3-118.5 66-0.3c4.4 0 8 3.6 8 8 0 1.9-0.7 3.7-1.9 5.2L553 512l130.1 155.1z" fill="#9f7aea" p-id="10462"></path>
-        </svg>
+        <img class="icon" src="../assets/home/suggestion_icon.png" alt="">
       </button>
     </div>
 
     <div v-if="showModal" class="modal-overlay" @click="showModal = false">
       <div class="modal-content" @click.stop>
         <div class="modal-header">
-          <h3>提交建议</h3>
+          <h3>Submit Suggestions</h3>
           <button class="close-button" @click="showModal = false">&times;</button>
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label for="twitter">Twitter 用户名</label>
-            <input 
-              type="text" 
-              id="twitter" 
-              v-model="twitter" 
-              placeholder="请输入您的Twitter用户名"
-            >
+            <label for="twitter">Twitter</label>
+            <input type="text" id="twitter" v-model="twitter" placeholder="https://x.com/...">
           </div>
           <div class="form-group">
-            <label for="suggestion">您的建议</label>
-            <textarea 
-              id="suggestion" 
-              v-model="suggestion" 
-              placeholder="请输入您的建议..."
-              rows="4"
-            ></textarea>
+            <label for="suggestion">Suggestion</label>
+            <textarea id="suggestion" v-model="suggestion" placeholder="Please input your suggestion..."
+              rows="4"></textarea>
           </div>
         </div>
         <div class="modal-footer">
-          <button class="submit-button" @click="submitFeedback">提交</button>
+          <button class="submit-button" @click="submitFeedback">SUBMIT</button>
         </div>
       </div>
     </div>
@@ -44,6 +32,7 @@
 </template>
 
 <script>
+import { post_sggestions } from "@/assets/js/draw.js";
 export default {
   name: 'FeedbackButton',
   data() {
@@ -54,25 +43,31 @@ export default {
     }
   },
   methods: {
-    submitFeedback() {
+    async submitFeedback() {
       if (!this.twitter || !this.suggestion) {
-        alert('请填写完整信息');
+        this.$message.warning('Please provide complete information');
         return;
       }
-      // TODO: 这里可以添加提交到后端的逻辑
-      console.log('Feedback submitted:', {
-        twitter: this.twitter,
-        suggestion: this.suggestion
-      });
+      try {
+        const data = await post_sggestions({
+          twitter: this.twitter,
+          suggestion: this.suggestion
+        });
+        if (data.success == true) {
+          this.$message.success('Submitted successfully! Thank you for your suggestion');
+        }
+      } catch (error) {
+        this.$message.error("Submission failed, please contact the administrator");
+      }
       this.showModal = false;
       this.twitter = '';
       this.suggestion = '';
-    }
+    },
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .feedback-container {
   position: fixed;
   bottom: 30px;
@@ -96,6 +91,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .icon {
+    width: 90%;
+    height: 90%;
+  }
+
 }
 
 .feedback-button:hover {
@@ -106,9 +107,12 @@ export default {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -229,4 +233,4 @@ export default {
 .submit-button:active {
   transform: translateY(0);
 }
-</style> 
+</style>
