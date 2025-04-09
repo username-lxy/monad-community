@@ -348,7 +348,7 @@ const nftData = [
     name: "MonadMoonads",
     twitter: "https://x.com/MonadMoonads",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1795607289283366912/KI2AGBBX_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1752368502508277760/Y4KXFtpC_400x400.jpg",
     discord_url: "",
     magiceden_url: "",
   },

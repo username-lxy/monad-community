@@ -89,7 +89,7 @@ const user_list = [
     tw: "0xGrimjow",
     twitter: "https://x.com/0xGrimjow",
     avatar:
-      "https://pbs.twimg.com/profile_images/1882778414026731520/9opeuFiz_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1908569295958757376/hIhLwv8x_400x400.jpg",
     introduce: "@DrakeExchange Community - @monad_xyz Mon - @chogstarrr Mod",
   },
   {
