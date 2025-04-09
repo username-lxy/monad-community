@@ -286,7 +286,6 @@ export default {
           describe: "",
           twitter: "https://x.com/uuprc11476591",
         },
-
         {
           src: require("@/assets/test_art/ghooolyache-1.jpg"),
           name: "ghooolyache",
