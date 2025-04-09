@@ -93,8 +93,8 @@ export default {
   justify-content: center;
 
   .icon {
-    width: 86%;
-    height: 86%;
+    width: 85%;
+    height: 85%;
   }
 
 }
