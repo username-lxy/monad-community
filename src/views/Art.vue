@@ -28,9 +28,9 @@
                 ></path></svg
               >&nbsp;<span>{{ video_img[index].name }}</span></a
             > -->
-            <a :href="video_img[index] && video_img[index].authorTwitter" target="_blank" class="link"><svg t="1743086319512" class="icon"
-                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9165" width="200"
-                height="200">
+            <a :href="video_img[index] && video_img[index].authorTwitter" target="_blank" class="link"><svg
+                t="1743086319512" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="9165" width="200" height="200">
                 <path
                   d="M861.44 246.8864a68.266667 68.266667 0 0 1 93.422933 58.965333l0.136534 4.3008 0.477866 232.5504a68.266667 68.266667 0 0 1-89.361066 65.0752l-4.061867-1.467733-157.832533-62.583467a34.133333 34.133333 0 0 1 22.647466-64.341333l2.5088 0.887467 157.832534 62.5664-0.477867-232.533334-157.2864 62.737067a34.133333 34.133333 0 0 1-27.733333-62.327467l2.440533-1.092266 157.2864-62.737067z"
                   fill="#c0c0c0" p-id="9166"></path>
@@ -95,10 +95,10 @@
         <div class="carousel-row">
           <div class="carousel-row-content">
             <div class="carousel-item" v-for="(item, index) in duplicatedCarouselItems" :key="'left-' + index">
-              <img :src="item.src" :alt="'NFT ' + index" loading="lazy" />
+              <img :src="item.imageUrl" :alt="'NFT ' + index" loading="lazy" />
               <div class="shadow">
-                <a :href="item.twitter" target="_blank" class="a_hover">
-                  {{ item.name }}
+                <a :href="item.twitterUrl" target="_blank" class="a_hover">
+                  {{ item.twitterName }}
                 </a>
               </div>
             </div>
@@ -109,10 +109,10 @@
         <div class="carousel-row">
           <div class="carousel-row-content">
             <div class="carousel-item" v-for="(item, index) in duplicatedCarouselItems1" :key="'right-' + index">
-              <img :src="item.src" :alt="'NFT ' + index" loading="lazy" />
+              <img :src="item.imageUrl" :alt="'NFT ' + index" loading="lazy" />
               <div class="shadow">
-                <a :href="item.twitter" target="_blank" class="a_hover">
-                  {{ item.name }}
+                <a :href="item.twitterUrl" target="_blank" class="a_hover">
+                  {{ item.twitterName }}
                 </a>
               </div>
             </div>
@@ -130,7 +130,7 @@ import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import { styleToRem } from "@/utils/pxToRem";
 // import { nftData } from "@/assets/js/art.js";
-import { get_all_videos } from "@/assets/js/draw.js";
+import { get_all_videos, get_home_artists } from "@/assets/js/draw.js";
 export default {
   components: {
     headerVue,
@@ -185,242 +185,242 @@ export default {
       ],
       video_index: -1,
       carouselItems: [
-        {
-          src: require("@/assets/test_art/Charles97019791-1.jpg"),
-          name: "Kyrie tt.nad",
-          describe: "",
-          twitter: "https://x.com/Charles97019791",
-        },
-        {
-          src: require("@/assets/test_art/dj673285379-1.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
-        },
-        {
-          src: require("@/assets/test_art/HhhhHannah-1.jpg"),
-          name: "hannah_hhhh",
-          describe: "",
-          twitter: "https://x.com/HhhhHannah",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-1.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/melanthaia-1.jpg"),
-          name: "melanthaia",
-          describe: "",
-          twitter: "https://x.com/melanthaia",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-1.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-3.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Polly_r7-1.jpg"),
-          name: "Pollyyyyy",
-          describe: "",
-          twitter: "https://x.com/Polly_r7",
-        },
-        {
-          src: require("@/assets/test_art/XHOYH-1.jpg"),
-          name: "Huan",
-          describe: "",
-          twitter: "https://x.com/XHOYH",
-        },
-        {
-          src: require("@/assets/test_art/faber4904-2.jpg"),
-          name: "Faber",
-          describe: "",
-          twitter: "https://x.com/faber4904",
-        },
-        {
-          src: require("@/assets/test_art/uuprc11476591-1.jpg"),
-          name: "Lewis Herring",
-          describe: "",
-          twitter: "https://x.com/uuprc11476591",
-        },
-        {
-          src: require("@/assets/test_art/ghooolyache-1.jpg"),
-          name: "ghooolyache",
-          describe: "",
-          twitter: "https://x.com/ghooolyache",
-        },
-        {
-          src: require("@/assets/test_art/_Kristina8888-1.jpg"),
-          name: "Kristina⌘",
-          describe: "",
-          twitter: "https://x.com/_Kristina8888",
-        },
-        {
-          src: require("@/assets/test_art/0xpotatoking-1.jpg"),
-          name: "Potato King",
-          describe: "",
-          twitter: "https://x.com/0xpotatoking",
-        },
-        {
-          src: require("@/assets/test_art/depskydeps-1.jpg"),
-          name: "depskyyy",
-          describe: "",
-          twitter: "https://x.com/depskydeps",
-        },
-        {
-          src: require("@/assets/test_art/Dreamer117Zz-1.jpg"),
-          name: "Dream ⨀",
-          describe: "",
-          twitter: "https://x.com/Dreamer117Zz",
-        },
-        {
-          src: require("@/assets/test_art/damiyahh8-1.jpg"),
-          name: "Damiyahh",
-          describe: "",
-          twitter: "https://x.com/damiyahh8",
-        },
-        {
-          src: require("@/assets/test_art/lambe1981-1.jpg"),
-          name: "lambe⦿nad",
-          describe: "",
-          twitter: "https://x.com/lambe1981",
-        },
-        {
-          src: require("@/assets/test_art/0xAmne-1.jpg"),
-          name: "Amne ⨀",
-          describe: "",
-          twitter: "https://x.com/0xAmne",
-        },
+        // {
+        //   src: require("@/assets/test_art/Charles97019791-1.jpg"),
+        //   name: "Kyrie tt.nad",
+        //   describe: "",
+        //   twitter: "https://x.com/Charles97019791",
+        // },
+        // {
+        //   src: require("@/assets/test_art/dj673285379-1.jpg"),
+        //   name: "J King",
+        //   describe: "",
+        //   twitter: "https://x.com/dj673285379",
+        // },
+        // {
+        //   src: require("@/assets/test_art/HhhhHannah-1.jpg"),
+        //   name: "hannah_hhhh",
+        //   describe: "",
+        //   twitter: "https://x.com/HhhhHannah",
+        // },
+        // {
+        //   src: require("@/assets/test_art/jaychen981111-1.jpg"),
+        //   name: "CHEN⌘",
+        //   describe: "",
+        //   twitter: "https://x.com/jaychen981111",
+        // },
+        // {
+        //   src: require("@/assets/test_art/melanthaia-1.jpg"),
+        //   name: "melanthaia",
+        //   describe: "",
+        //   twitter: "https://x.com/melanthaia",
+        // },
+        // {
+        //   src: require("@/assets/test_art/Mido_269-1.jpg"),
+        //   name: "Midodo",
+        //   describe: "",
+        //   twitter: "https://x.com/Mido_269",
+        // },
+        // {
+        //   src: require("@/assets/test_art/Pican0_o-3.jpg"),
+        //   name: "Picano",
+        //   describe: "",
+        //   twitter: "https://x.com/Pican0_o",
+        // },
+        // {
+        //   src: require("@/assets/test_art/Polly_r7-1.jpg"),
+        //   name: "Pollyyyyy",
+        //   describe: "",
+        //   twitter: "https://x.com/Polly_r7",
+        // },
+        // {
+        //   src: require("@/assets/test_art/XHOYH-1.jpg"),
+        //   name: "Huan",
+        //   describe: "",
+        //   twitter: "https://x.com/XHOYH",
+        // },
+        // {
+        //   src: require("@/assets/test_art/faber4904-2.jpg"),
+        //   name: "Faber",
+        //   describe: "",
+        //   twitter: "https://x.com/faber4904",
+        // },
+        // {
+        //   src: require("@/assets/test_art/uuprc11476591-1.jpg"),
+        //   name: "Lewis Herring",
+        //   describe: "",
+        //   twitter: "https://x.com/uuprc11476591",
+        // },
+        // {
+        //   src: require("@/assets/test_art/ghooolyache-1.jpg"),
+        //   name: "ghooolyache",
+        //   describe: "",
+        //   twitter: "https://x.com/ghooolyache",
+        // },
+        // {
+        //   src: require("@/assets/test_art/_Kristina8888-1.jpg"),
+        //   name: "Kristina⌘",
+        //   describe: "",
+        //   twitter: "https://x.com/_Kristina8888",
+        // },
+        // {
+        //   src: require("@/assets/test_art/0xpotatoking-1.jpg"),
+        //   name: "Potato King",
+        //   describe: "",
+        //   twitter: "https://x.com/0xpotatoking",
+        // },
+        // {
+        //   src: require("@/assets/test_art/depskydeps-1.jpg"),
+        //   name: "depskyyy",
+        //   describe: "",
+        //   twitter: "https://x.com/depskydeps",
+        // },
+        // {
+        //   src: require("@/assets/test_art/Dreamer117Zz-1.jpg"),
+        //   name: "Dream ⨀",
+        //   describe: "",
+        //   twitter: "https://x.com/Dreamer117Zz",
+        // },
+        // {
+        //   src: require("@/assets/test_art/damiyahh8-1.jpg"),
+        //   name: "Damiyahh",
+        //   describe: "",
+        //   twitter: "https://x.com/damiyahh8",
+        // },
+        // {
+        //   src: require("@/assets/test_art/lambe1981-1.jpg"),
+        //   name: "lambe⦿nad",
+        //   describe: "",
+        //   twitter: "https://x.com/lambe1981",
+        // },
+        // {
+        //   src: require("@/assets/test_art/0xAmne-1.jpg"),
+        //   name: "Amne ⨀",
+        //   describe: "",
+        //   twitter: "https://x.com/0xAmne",
+        // },
       ],
       carouselItems1: [
-        {
-          src: require("@/assets/test_art/Charles97019791-2.jpg"),
-          name: "Kyrie tt.nad",
-          describe: "",
-          twitter: "https://x.com/Charles97019791",
-        },
-        {
-          src: require("@/assets/test_art/dj673285379-2.jpg"),
-          name: "J King",
-          describe: "",
-          twitter: "https://x.com/dj673285379",
-        },
-        {
-          src: require("@/assets/test_art/HhhhHannah-2.jpg"),
-          name: "hannah_hhhh",
-          describe: "",
-          twitter: "https://x.com/HhhhHannah",
-        },
-        {
-          src: require("@/assets/test_art/jaychen981111-2.jpg"),
-          name: "CHEN⌘",
-          describe: "",
-          twitter: "https://x.com/jaychen981111",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-1.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
-        {
-          src: require("@/assets/test_art/Mido_269-2.jpg"),
-          name: "Midodo",
-          describe: "",
-          twitter: "https://x.com/Mido_269",
-        },
-        {
-          src: require("@/assets/test_art/Pican0_o-2.jpg"),
-          name: "Picano",
-          describe: "",
-          twitter: "https://x.com/Pican0_o",
-        },
-        {
-          src: require("@/assets/test_art/Polly_r7-2.jpg"),
-          name: "Pollyyyyy",
-          describe: "",
-          twitter: "https://x.com/Polly_r7",
-        },
-        {
-          src: require("@/assets/test_art/XHOYH-2.jpg"),
-          name: "Huan",
-          describe: "",
-          twitter: "https://x.com/XHOYH",
-        },
-        {
-          src: require("@/assets/test_art/faber4904-1.jpg"),
-          name: "Faber",
-          describe: "",
-          twitter: "https://x.com/faber4904",
-        },
-        {
-          src: require("@/assets/test_art/uuprc11476591-2.jpg"),
-          name: "Lewis Herring",
-          describe: "",
-          twitter: "https://x.com/uuprc11476591",
-        },
-        {
-          src: require("@/assets/test_art/totomal090202-2.jpg"),
-          name: "toto",
-          describe: "",
-          twitter: "https://x.com/totomal090202",
-        },
-        {
-          src: require("@/assets/test_art/ghooolyache-2.jpg"),
-          name: "ghooolyache",
-          describe: "",
-          twitter: "https://x.com/ghooolyache",
-        },
-        {
-          src: require("@/assets/test_art/_Kristina8888-2.jpg"),
-          name: "Kristina⌘",
-          describe: "",
-          twitter: "https://x.com/_Kristina8888",
-        },
-        {
-          src: require("@/assets/test_art/0xpotatoking-2.jpg"),
-          name: "Potato King",
-          describe: "",
-          twitter: "https://x.com/0xpotatoking",
-        },
-        {
-          src: require("@/assets/test_art/depskydeps-2.jpg"),
-          name: "depskyyy",
-          describe: "",
-          twitter: "https://x.com/depskydeps",
-        },
-        {
-          src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
-          name: "Dream ⨀",
-          describe: "",
-          twitter: "https://x.com/Dreamer117Zz",
-        },
-        {
-          src: require("@/assets/test_art/damiyahh8-2.jpg"),
-          name: "Damiyahh",
-          describe: "",
-          twitter: "https://x.com/damiyahh8",
-        },
-        {
-          src: require("@/assets/test_art/lambe1981-2.jpg"),
-          name: "lambe⦿nad",
-          describe: "",
-          twitter: "https://x.com/lambe1981",
-        },
-        {
-          src: require("@/assets/test_art/0xAmne-2.jpg"),
-          name: "Amne ⨀",
-          describe: "",
-          twitter: "https://x.com/0xAmne",
-        },
+        //   {
+        //     src: require("@/assets/test_art/Charles97019791-2.jpg"),
+        //     name: "Kyrie tt.nad",
+        //     describe: "",
+        //     twitter: "https://x.com/Charles97019791",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/dj673285379-2.jpg"),
+        //     name: "J King",
+        //     describe: "",
+        //     twitter: "https://x.com/dj673285379",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/HhhhHannah-2.jpg"),
+        //     name: "hannah_hhhh",
+        //     describe: "",
+        //     twitter: "https://x.com/HhhhHannah",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/jaychen981111-2.jpg"),
+        //     name: "CHEN⌘",
+        //     describe: "",
+        //     twitter: "https://x.com/jaychen981111",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/Mido_269-1.jpg"),
+        //     name: "Midodo",
+        //     describe: "",
+        //     twitter: "https://x.com/Mido_269",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/Mido_269-2.jpg"),
+        //     name: "Midodo",
+        //     describe: "",
+        //     twitter: "https://x.com/Mido_269",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/Pican0_o-2.jpg"),
+        //     name: "Picano",
+        //     describe: "",
+        //     twitter: "https://x.com/Pican0_o",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/Polly_r7-2.jpg"),
+        //     name: "Pollyyyyy",
+        //     describe: "",
+        //     twitter: "https://x.com/Polly_r7",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/XHOYH-2.jpg"),
+        //     name: "Huan",
+        //     describe: "",
+        //     twitter: "https://x.com/XHOYH",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/faber4904-1.jpg"),
+        //     name: "Faber",
+        //     describe: "",
+        //     twitter: "https://x.com/faber4904",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/uuprc11476591-2.jpg"),
+        //     name: "Lewis Herring",
+        //     describe: "",
+        //     twitter: "https://x.com/uuprc11476591",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/totomal090202-2.jpg"),
+        //     name: "toto",
+        //     describe: "",
+        //     twitter: "https://x.com/totomal090202",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/ghooolyache-2.jpg"),
+        //     name: "ghooolyache",
+        //     describe: "",
+        //     twitter: "https://x.com/ghooolyache",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/_Kristina8888-2.jpg"),
+        //     name: "Kristina⌘",
+        //     describe: "",
+        //     twitter: "https://x.com/_Kristina8888",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/0xpotatoking-2.jpg"),
+        //     name: "Potato King",
+        //     describe: "",
+        //     twitter: "https://x.com/0xpotatoking",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/depskydeps-2.jpg"),
+        //     name: "depskyyy",
+        //     describe: "",
+        //     twitter: "https://x.com/depskydeps",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/Dreamer117Zz-2.jpg"),
+        //     name: "Dream ⨀",
+        //     describe: "",
+        //     twitter: "https://x.com/Dreamer117Zz",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/damiyahh8-2.jpg"),
+        //     name: "Damiyahh",
+        //     describe: "",
+        //     twitter: "https://x.com/damiyahh8",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/lambe1981-2.jpg"),
+        //     name: "lambe⦿nad",
+        //     describe: "",
+        //     twitter: "https://x.com/lambe1981",
+        //   },
+        //   {
+        //     src: require("@/assets/test_art/0xAmne-2.jpg"),
+        //     name: "Amne ⨀",
+        //     describe: "",
+        //     twitter: "https://x.com/0xAmne",
+        //   },
       ],
       rawCardStyles: [
         {
@@ -481,9 +481,13 @@ export default {
     const data = await get_all_videos()
     if (data.code == 200) {
       this.video_img = data.data
-      console.log(this.video_img);
-      
+      // console.log(this.video_img);
     }
+
+    const imgList = await get_home_artists()
+    if (imgList.code != 200) return;
+    this.carouselItems = imgList.data.type0
+    this.carouselItems1 = imgList.data.type1
   },
   mounted() {
     // window.scrollTo(0, 0);

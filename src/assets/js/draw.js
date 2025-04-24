@@ -84,3 +84,10 @@ export const get_all_artists = () => {
     url: "/artworks/list-with-artists",
   });
 };
+
+// 获取home底部艺术图
+export const get_home_artists = () => {
+  return serviceAxios({
+    url: "/home-artists",
+  });
+};

@@ -232,7 +232,7 @@ import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import art from "@/views/Art.vue";
 // import { home_nft } from "@/assets/js/nft.js";
-import { get_contributors, get_home_nft, } from "@/assets/js/draw.js";
+import { get_home_nft, } from "@/assets/js/draw.js";
 export default {
   components: {
     headerVue,
@@ -298,9 +298,6 @@ export default {
     }
   },
   async mounted() {
-    const data = await get_contributors()
-    console.log(data);
-
     window.scrollTo(0, 0);
     // 确保自动播放初始化
     this.$nextTick(() => {
