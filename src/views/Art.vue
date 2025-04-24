@@ -3,26 +3,10 @@
     <headerVue />
     <section class="floating-cards-section">
       <div class="container">
-        <div
-          class="floating-card"
-          v-for="(video, index) in videos"
-          :key="index"
-          @mouseenter="handleMouseEnter(index)"
-          @mouseleave="handleMouseLeave(index)"
-          :style="floatingCardStyles[index]"
-        >
-          <img
-            :src="video_img[index].src"
-            alt=""
-            v-show="index != video_index"
-          />
-          <video
-            :ref="'videoPlayer' + index"
-            loop
-            preload="auto"
-            muted
-            v-show="video_index == index"
-          >
+        <div class="floating-card" v-for="(video, index) in videos" :key="index" @mouseenter="handleMouseEnter(index)"
+          @mouseleave="handleMouseLeave(index)" :style="floatingCardStyles[index]">
+          <img :src="video_img[index] && video_img[index].coverImage" alt="" v-show="index != video_index" />
+          <video :ref="'videoPlayer' + index" loop preload="auto" muted v-show="video_index == index">
             <source :src="video.src" type="video/mp4" />
           </video>
           <div class="auther" v-show="video_index == index">
@@ -44,41 +28,22 @@
                 ></path></svg
               >&nbsp;<span>{{ video_img[index].name }}</span></a
             > -->
-            <a :href="video_img[index].twitter" target="_blank" class="link"
-              ><svg
-                t="1743086319512"
-                class="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="9165"
-                width="200"
-                height="200"
-              >
+            <a :href="video_img[index] && video_img[index].authorTwitter" target="_blank" class="link"><svg t="1743086319512" class="icon"
+                viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9165" width="200"
+                height="200">
                 <path
                   d="M861.44 246.8864a68.266667 68.266667 0 0 1 93.422933 58.965333l0.136534 4.3008 0.477866 232.5504a68.266667 68.266667 0 0 1-89.361066 65.0752l-4.061867-1.467733-157.832533-62.583467a34.133333 34.133333 0 0 1 22.647466-64.341333l2.5088 0.887467 157.832534 62.5664-0.477867-232.533334-157.2864 62.737067a34.133333 34.133333 0 0 1-27.733333-62.327467l2.440533-1.092266 157.2864-62.737067z"
-                  fill="#c0c0c0"
-                  p-id="9166"
-                ></path>
+                  fill="#c0c0c0" p-id="9166"></path>
                 <path
                   d="M682.666667 119.466667H136.533333a68.266667 68.266667 0 0 0-68.266666 68.266666v477.866667a68.266667 68.266667 0 0 0 68.266666 68.266667h546.133334a68.266667 68.266667 0 0 0 68.266666-68.266667V187.733333a68.266667 68.266667 0 0 0-68.266666-68.266666zM136.533333 187.733333h546.133334v477.866667H136.533333V187.733333z"
-                  fill="#c0c0c0"
-                  p-id="9167"
-                ></path>
+                  fill="#c0c0c0" p-id="9167"></path>
                 <path
                   d="M242.5344 701.5424a34.133333 34.133333 0 0 1 62.1568 28.091733l-1.092267 2.423467-85.333333 170.666667a34.133333 34.133333 0 0 1-62.1568-28.091734l1.092267-2.423466 85.333333-170.666667zM530.875733 686.267733a34.133333 34.133333 0 0 1 44.509867 12.919467l1.28 2.3552 85.333333 170.666667a34.133333 34.133333 0 0 1-59.784533 32.8704l-1.28-2.3552-85.333333-170.666667a34.133333 34.133333 0 0 1 15.274666-45.789867z"
-                  fill="#c0c0c0"
-                  p-id="9168"
-                ></path>
+                  fill="#c0c0c0" p-id="9168"></path>
                 <path
                   d="M512 529.066667v34.133333a34.133333 34.133333 0 0 1-34.133333 34.133333H238.933333a34.133333 34.133333 0 0 1-34.133333-34.133333v-34.133333h307.2z"
-                  fill="#c0c0c0"
-                  p-id="9169"
-                ></path></svg
-              >&nbsp;<span
-                >{{ video_img[index].name }}&nbsp;&nbsp;&nbsp;</span
-              ></a
-            >
+                  fill="#c0c0c0" p-id="9169"></path>
+              </svg>&nbsp;<span>{{ video_img[index] && video_img[index].authorName }}&nbsp;&nbsp;&nbsp;</span></a>
           </div>
           <!-- <div class="hint">悬停播放 #{{ index + 1 }}</div> -->
         </div>
@@ -116,12 +81,10 @@
           <svg class="icon" viewBox="0 0 1024 1024">
             <path
               d="M533.33333333 448l0 128-458.688 1e-8c-29.44 0-53.312-23.872-53.312-53.31200001l0-21.376A53.312 53.312 0 0 1 74.64533333 447.99999999L533.33333333 448z"
-              fill="#ffffff"
-            ></path>
+              fill="#ffffff"></path>
             <path
               d="M614.61333334 242.176l358.07999999 220.79999999a53.312 53.312 0 0 1 0.57600001 90.43200001l-358.08000001 226.752A53.312 53.312 0 0 1 533.33333333 735.104L533.33333333 287.552a53.312 53.312 0 0 1 81.28-45.44z"
-              fill="#ffffff"
-            ></path>
+              fill="#ffffff"></path>
           </svg>
         </div>
       </div>
@@ -131,11 +94,7 @@
         <!-- 从左往右的轮播 -->
         <div class="carousel-row">
           <div class="carousel-row-content">
-            <div
-              class="carousel-item"
-              v-for="(item, index) in duplicatedCarouselItems"
-              :key="'left-' + index"
-            >
+            <div class="carousel-item" v-for="(item, index) in duplicatedCarouselItems" :key="'left-' + index">
               <img :src="item.src" :alt="'NFT ' + index" loading="lazy" />
               <div class="shadow">
                 <a :href="item.twitter" target="_blank" class="a_hover">
@@ -149,11 +108,7 @@
         <!-- 从右往左的轮播 -->
         <div class="carousel-row">
           <div class="carousel-row-content">
-            <div
-              class="carousel-item"
-              v-for="(item, index) in duplicatedCarouselItems1"
-              :key="'right-' + index"
-            >
+            <div class="carousel-item" v-for="(item, index) in duplicatedCarouselItems1" :key="'right-' + index">
               <img :src="item.src" :alt="'NFT ' + index" loading="lazy" />
               <div class="shadow">
                 <a :href="item.twitter" target="_blank" class="a_hover">
@@ -175,6 +130,7 @@ import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import { styleToRem } from "@/utils/pxToRem";
 // import { nftData } from "@/assets/js/art.js";
+import { get_all_videos } from "@/assets/js/draw.js";
 export default {
   components: {
     headerVue,
@@ -193,30 +149,39 @@ export default {
       ],
       video_img: [
         {
-          src: require("@/assets/art/neo.png"),
-          name: "Neo",
-          twitter: "https://x.com/neo_nca",
+          authorName: "",
+          authorTwitter: "",
+          authorDescription: "",
+          authorAvatar: "",
+          videoPath: "",
+          coverImage: "",
+          type: "1"
         },
-        {
-          src: require("@/assets/art/pipeline.png"),
-          name: "The Pipeline",
-          twitter: "https://x.com/pipeline_xyz",
-        },
-        {
-          src: require("@/assets/art/grimjow.png"),
-          name: "Grimjow",
-          twitter: "https://x.com/0xGrimjow",
-        },
-        {
-          src: require("@/assets/art/old_six.png"),
-          name: "Old 6",
-          twitter: "https://x.com/Old_6_",
-        },
-        {
-          src: require("@/assets/art/capas.png"),
-          name: "Capas",
-          twitter: "https://x.com/Dimavolshebnik",
-        },
+        // {
+        //   src: require("@/assets/art/neo.png"),
+        //   name: "Neo",
+        //   twitter: "https://x.com/neo_nca",
+        // },
+        // {
+        //   src: require("@/assets/art/pipeline.png"),
+        //   name: "The Pipeline",
+        //   twitter: "https://x.com/pipeline_xyz",
+        // },
+        // {
+        //   src: require("@/assets/art/grimjow.png"),
+        //   name: "Grimjow",
+        //   twitter: "https://x.com/0xGrimjow",
+        // },
+        // {
+        //   src: require("@/assets/art/old_six.png"),
+        //   name: "Old 6",
+        //   twitter: "https://x.com/Old_6_",
+        // },
+        // {
+        //   src: require("@/assets/art/capas.png"),
+        //   name: "Capas",
+        //   twitter: "https://x.com/Dimavolshebnik",
+        // },
       ],
       video_index: -1,
       carouselItems: [
@@ -512,12 +477,20 @@ export default {
       return this.rawCardStyles.map((style) => styleToRem(style));
     },
   },
+  async created() {
+    const data = await get_all_videos()
+    if (data.code == 200) {
+      this.video_img = data.data
+      console.log(this.video_img);
+      
+    }
+  },
   mounted() {
     // window.scrollTo(0, 0);
     this.initCarouselHover();
     this.setupIntersectionObserver();
   },
-  beforeDestroy() {},
+  beforeDestroy() { },
   methods: {
     changePage() {
       this.$router.push("/Draw");
@@ -663,6 +636,7 @@ export default {
         font-size: 20px;
         line-height: 20px;
         color: #c0c0c0;
+
         .icon {
           width: 20px;
           height: 20px;
@@ -670,6 +644,7 @@ export default {
 
         &:hover {
           color: #836ef9;
+
           .icon {
             path {
               fill: #836ef9;
@@ -803,7 +778,8 @@ export default {
 
         .carousel-item {
           flex: 0 0 auto;
-          height: 90%; /* 稍微小于容器高度 */
+          height: 90%;
+          /* 稍微小于容器高度 */
           margin: 0 15px;
           background: var(--glass-bg);
           backdrop-filter: blur(10px);
@@ -816,6 +792,7 @@ export default {
           &:hover {
             transform: translateY(-10px);
             z-index: 10;
+
             .shadow {
               opacity: 0.9;
               shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -842,12 +819,14 @@ export default {
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 999;
+
             .a_hover {
               position: absolute;
               bottom: 10px;
               left: 10px;
               color: #fff;
               font-size: 18px;
+
               &:hover {
                 color: #836ef9;
               }
@@ -877,16 +856,19 @@ export default {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0) rotate(var(--rotation));
   }
+
   50% {
     transform: translateY(-20px) rotate(var(--rotation));
   }
@@ -896,16 +878,19 @@ export default {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: #fff;
   }
@@ -915,6 +900,7 @@ export default {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -924,6 +910,7 @@ export default {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -933,6 +920,7 @@ export default {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -983,5 +971,4 @@ export default {
 //       min-width: 120px !important;
 //     }
 //   }
-// }
-</style>
+// }</style>

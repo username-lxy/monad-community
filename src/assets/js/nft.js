@@ -1,9 +1,17 @@
 const nftData = [
   {
+    name: "RealNads",
+    twitter: "https://x.com/RealNadsClub",
+    avatar_url:
+      "https://pbs.twimg.com/profile_images/1888607731390828545/V2s-VT4p_400x400.jpg",
+    discord_url: "https://t.co/7fc5iq91fu",
+    magiceden_url: "https://magiceden.io/collections/monad-testnet/0x0bbf4a69f5e20ddf2244add5fc412b9631a2cba1",
+  },
+  {
     name: "Lil chogstars",
     twitter: "https://x.com/chogstarrr",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1909303079549517825/bHXZExfo_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1909655451350056961/XFEpMcwX_400x400.jpg",
     discord_url: "https://discord.com/invite/chogstars",
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0x26c86f2835c114571df2b6ce9ba52296cc0fa6bb",
@@ -144,7 +152,7 @@ const nftData = [
     name: "Monshape Club",
     twitter: "https://x.com/monshape",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1884276953211138049/9mFpRDci_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1911315786511081472/XGtCJ6XX_400x400.jpg",
     discord_url: "https://discord.com/invite/monshape",
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0x69f2688abe5dcde0e2413f77b80efcc16361a56e",
@@ -277,14 +285,6 @@ const nftData = [
     magiceden_url: "",
   },
   {
-    name: "RealNads",
-    twitter: "https://x.com/RealNadsClub",
-    avatar_url:
-      "https://pbs.twimg.com/profile_images/1888607731390828545/V2s-VT4p_400x400.jpg",
-    discord_url: "https://t.co/7fc5iq91fu",
-    magiceden_url: "https://magiceden.io/collections/monad-testnet/0x0bbf4a69f5e20ddf2244add5fc412b9631a2cba1",
-  },
-  {
     name: "Legends of Hearts",
     twitter: "https://x.com/loh_online",
     avatar_url:
@@ -305,16 +305,15 @@ const nftData = [
     name: "Lyraffe Army",
     twitter: "https://x.com/lyraffearmy_xyz",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1691710013029470208/qcMirJeI_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1874948816715255808/0wcdIsNZ_400x400.jpg",
     discord_url: "",
     magiceden_url: "",
   },
-
   {
     name: "Molandak",
     twitter: "https://x.com/molandak",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1741771204921372672/DH7Aj18x_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1741492322733297664/QWn9pF3i_400x400.jpg",
     discord_url: "",
     magiceden_url: "",
   },
@@ -403,7 +402,7 @@ const nftData = [
     name: "Monsprout",
     twitter: "https://x.com/monsprout",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1877719546842247169/cKQXycSh_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1912434846393065472/6g7acC1G_400x400.jpg",
     discord_url: "",
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0xad59d2d57859a0af935e0b9664149067b2a13fee",
@@ -568,14 +567,6 @@ const nftData = [
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0xc7fbc69880a20bac235d3965854275c20f875930",
   },
-  // {
-  //   name: "Moyakinads",
-  //   twitter: "https://x.com/Moyakinads",
-  //   avatar_url: "",
-  //   discord_url: "",
-  //   magiceden_url:
-  //     "https://magiceden.io/collections/monad-testnet/0xd22385e223eff3b3b30a74874055b260a287a592",
-  // },
   {
     name: "Tya",
     twitter: "https://x.com/TyaBull",
@@ -600,7 +591,7 @@ const home_nft = [
     name: "Lil chogstars",
     twitter: "https://x.com/chogstarrr",
     avatar_url:
-      "https://pbs.twimg.com/profile_images/1909303079549517825/bHXZExfo_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1909655451350056961/XFEpMcwX_400x400.jpg",
     discord_url: "https://discord.com/invite/chogstars",
     magiceden_url:
       "https://magiceden.io/collections/monad-testnet/0x26c86f2835c114571df2b6ce9ba52296cc0fa6bb",

@@ -33,3 +33,54 @@ export const get_sggestions = () => {
     url: "/suggestions",
   });
 };
+
+// 获取建议者列表
+export const get_contributors = () => {
+  return serviceAxios({
+    url: "/contributors",
+  });
+};
+
+// X登录
+export const post_login = (firebaseToken) => {
+  return serviceAxios({
+    url: "/auth/firebase",
+    method: "post",
+    data: { firebaseToken: firebaseToken }
+  });
+};
+
+// 获取所有nft
+export const get_all_nft = () => {
+  return serviceAxios({
+    url: "/nft-data",
+  });
+};
+
+// 获取home页面的nft
+export const get_home_nft = () => {
+  return serviceAxios({
+    url: "/home_nft",
+  });
+};
+
+// 获取所有视频
+export const get_all_videos = () => {
+  return serviceAxios({
+    url: "/videos",
+  });
+};
+
+// 获取所有贡献者
+export const get_all_succ = () => {
+  return serviceAxios({
+    url: "/artists",
+  });
+};
+
+// 获取所有艺术作品
+export const get_all_artists = () => {
+  return serviceAxios({
+    url: "/artworks/list-with-artists",
+  });
+};

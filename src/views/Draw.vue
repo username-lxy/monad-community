@@ -20,21 +20,17 @@
     </div>
     <div class="waterfall-container">
       <!-- 瀑布流列容器 -->
-      <div
-        class="waterfall-column"
-        v-for="(column, index) in columns"
-        :key="index"
-      >
+      <div class="waterfall-column" v-for="(column, index) in columns" :key="index">
         <!-- 每个图片盒子 -->
         <div class="image-box" v-for="(item, index) in column" :key="index">
-          <img :src="item.src" :alt="item.name" @load="onImageLoad" />
+          <img :src="item.imageUrl" :alt="item.imageUrl" @load="onImageLoad" />
           <div class="image-info">
-            <a :href="item.twitter" target="_blank">
+            <a :href="item.artist.twitterUrl" target="_blank">
               <h3>
                 <img src="@/assets/auther.png" alt="" />
-                <span> {{ item.name }}</span>
+                <span> {{ item.artist.name }}</span>
               </h3>
-              <p>{{ item.describe }}</p>
+              <!-- <p>{{ item.describe }}</p> -->
             </a>
           </div>
         </div>
@@ -48,7 +44,7 @@
 import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import { artList } from "@/assets/js/art.js";
-import { getImg } from "@/assets/js/draw.js";
+import { getImg, get_all_artists } from "@/assets/js/draw.js";
 export default {
   name: "WaterfallGallery",
   components: {
@@ -59,7 +55,7 @@ export default {
     return {
       showText: false,
       // 图片数据
-      imgList: [...artList],
+      imgList: [],
       columnCount: 4, // 列数
       loadedImages: 0, // 已加载图片计数
     };
@@ -79,6 +75,13 @@ export default {
       return newArray;
       // return columns;
     },
+  },
+  async created() {
+    const data = await get_all_artists()
+    if (data.code == 200) {
+      this.imgList = data.data
+    }
+    console.log(data);
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -122,6 +125,7 @@ export default {
   .big_title {
     margin: 80px auto 50px;
     text-align: center;
+
     .t1 {
       font-size: 40px;
     }
@@ -129,11 +133,13 @@ export default {
     .t2 {
       margin-top: 15px;
       font-size: 20px;
+
       span {
         display: block;
       }
     }
   }
+
   /* 定义进入动画 */
   .fall-enter-active {
     animation: fallDown 0.5s ease-out;
@@ -142,10 +148,13 @@ export default {
   /* 定义动画 */
   @keyframes fallDown {
     from {
-      transform: translateY(-100vh); /* 从上方开始 */
+      transform: translateY(-100vh);
+      /* 从上方开始 */
     }
+
     to {
-      transform: translateY(0); /* 掉落到最终位置 */
+      transform: translateY(0);
+      /* 掉落到最终位置 */
     }
   }
 
@@ -161,7 +170,8 @@ export default {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      width: calc((100% - 40px) / 3); /* 3列，考虑间隙 */
+      width: calc((100% - 40px) / 3);
+      /* 3列，考虑间隙 */
 
       .image-box {
         width: 100%;
@@ -219,8 +229,10 @@ export default {
   /* 响应式设计 */
   @media (max-width: 900px) {
     .waterfall-column {
-      width: calc((100% - 20px) / 2); /* 2列 */
+      width: calc((100% - 20px) / 2);
+      /* 2列 */
     }
+
     .columnCount {
       columncount: 2;
     }
@@ -228,8 +240,10 @@ export default {
 
   @media (max-width: 600px) {
     .waterfall-column {
-      width: 100%; /* 1列 */
+      width: 100%;
+      /* 1列 */
     }
+
     .columnCount {
       columncount: 1;
     }

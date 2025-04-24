@@ -4,7 +4,7 @@ const user_list = [
     tw: "0xAmne",
     twitter: "https://x.com/0xAmne",
     avatar:
-      "https://pbs.twimg.com/profile_images/1895161783922372608/MX5eCHgA_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1910116058440089600/afa_RGXP_400x400.jpg",
     introduce: "@monad_xyz monartist • @pipeline_xyz intern",
   },
   {
@@ -72,7 +72,7 @@ const user_list = [
     tw: "ghooolyache",
     twitter: "https://x.com/ghooolyache",
     avatar:
-      "https://pbs.twimg.com/profile_images/1890635929313832960/w-qy1rWf_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1913051663000047616/OH_WmAch_400x400.jpg",
     introduce: "You can find me here@monad_xyz",
   },
   {
@@ -80,7 +80,7 @@ const user_list = [
     tw: "Makia981",
     twitter: "https://x.com/Makia981",
     avatar:
-      "https://pbs.twimg.com/profile_images/1867421391383146497/g8bDn36T_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1912769806832660481/unmU5Kxu_400x400.jpg",
     introduce:
       "Focuse on Monad & Defi Eco | @monad_xyz @monad_zw | PASSION!!!!!!!🔥 | @0x_xifeng 风哥铁粉",
   },
@@ -89,7 +89,7 @@ const user_list = [
     tw: "0xGrimjow",
     twitter: "https://x.com/0xGrimjow",
     avatar:
-      "https://pbs.twimg.com/profile_images/1908569295958757376/hIhLwv8x_400x400.jpg",
+      "https://pbs.twimg.com/profile_images/1911173699924787200/HUsODRJz_400x400.jpg",
     introduce: "@DrakeExchange Community - @monad_xyz Mon - @chogstarrr Mod",
   },
   {

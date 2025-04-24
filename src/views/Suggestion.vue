@@ -21,16 +21,10 @@
         alphabetical order according to the first letter of the X account)
       </span>
       <div class="contributors-grid">
-        <a
-          class="contributor-card"
-          v-for="(item, i) in userList"
-          :key="i"
-          :href="item.twitter"
-          target="_blank"
-        >
-          <img :src="item.avatar" :alt="item.name" class="contributor-avatar" />
+        <a class="contributor-card" v-for="(item, i) in userList" :key="item.id" :href="item.twitterUrl" target="_blank">
+          <img :src="item.avatarUrl" :alt="item.name" class="contributor-avatar" />
           <h3 class="contributor-name">{{ item.name }}</h3>
-          <p class="contributor-role">{{ item.introduce }}</p>
+          <p class="contributor-role">{{ item.description }}</p>
           <!-- <div class="contributor-links">
             <a href="https://github.com" target="_blank">GitHub</a>
             <a href="https://linkedin.com" target="_blank">LinkedIn</a>
@@ -46,6 +40,7 @@
 import headerVue from "@/components/header.vue";
 import footerVue from "@/components/footer.vue";
 import { user_list } from "@/assets/js/contributor.js";
+import { get_all_succ } from "@/assets/js/draw.js"
 export default {
   components: {
     headerVue,
@@ -54,11 +49,14 @@ export default {
   data() {
     return {
       showText: false,
-      userList: [...user_list],
-      //   particlesData: {
-
-      //   },
+      userList: [],
     };
+  },
+  async created() {
+    const data = await get_all_succ()
+    if (data.code == 200) {
+      this.userList = data.data
+    }
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -169,6 +167,7 @@ export default {
 <style lang="less" scoped>
 .wrap {
   padding-top: 100px;
+
   #particles-bg {
     position: fixed;
     top: 0;
@@ -178,6 +177,7 @@ export default {
     z-index: 1;
     background: linear-gradient(125deg, #000000, #1a1a1a, #000000);
   }
+
   .container {
     max-width: 1500px;
     margin: 0 auto;
@@ -188,6 +188,7 @@ export default {
   .big_title {
     margin: 80px auto 50px;
     text-align: center;
+
     .t1 {
       font-size: 40px;
     }
@@ -195,11 +196,13 @@ export default {
     .t2 {
       margin-top: 15px;
       font-size: 20px;
+
       span {
         display: block;
       }
     }
   }
+
   /* 定义进入动画 */
   .fall-enter-active {
     animation: fallDown 0.5s ease-out;
@@ -208,13 +211,17 @@ export default {
   /* 定义动画 */
   @keyframes fallDown {
     from {
-      transform: translateY(-100vh); /* 从上方开始 */
+      transform: translateY(-100vh);
+      /* 从上方开始 */
     }
+
     to {
-      transform: translateY(0); /* 掉落到最终位置 */
+      transform: translateY(0);
+      /* 掉落到最终位置 */
     }
   }
 }
+
 /* Contributors Section Styles */
 .contributors-section {
   padding: 20px 40px;
@@ -238,11 +245,9 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 50%
-  );
+  background: radial-gradient(circle at 50% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%);
   pointer-events: none;
 }
 
@@ -273,11 +278,9 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -321,7 +324,8 @@ export default {
   color: rgba(255, 255, 255, 0.7);
   //   margin-bottom: 20px;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 限制行数 */
+  -webkit-line-clamp: 3;
+  /* 限制行数 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
